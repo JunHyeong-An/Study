@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>숫자 맞추기</h2>
+    <p id="inputForm" style="display: none;">숫자 입력 : <input id="inputNum"></p>
+    <input type="button" onclick="start();" value="게임시작!!" id="startBtn">
+    <input type="button" onclick="end();" value="게임종료!!" id="endBtn" style="display: none;">
+    <input type="button" onclick="game();" value="정답!!" style="display: none;" id="gameBtn">
+
+    <script>
+        var answer, inputNum;
+
+        function start() {
+            document.getElementById("inputNum").value = null;
+            answer = parseInt(Math.random() * 100);
+            alert("게임 시작!!")
+            console.log(answer);
+            document.getElementById("inputForm").style.display="block";
+            document.getElementById("gameBtn").style.display="inline";
+            document.getElementById("startBtn").style.display="none";
+            document.getElementById("endBtn").style.display="inline";
+        }
+
+        function game() {
+            inputNum = document.getElementById("inputNum").value;
+
+            if(answer > inputNum) {
+                alert("조금만 높혀보세요!!");
+            }
+            else if(answer < inputNum) {
+                alert("조금만 낮춰보세요!!");
+            }
+            else {
+                alert("정답입니다!!!");
+                answerFun();
+            }
+        }
+
+        function answerFun() {
+            var bo = confirm("다시 하시겠습니까?");
+            if(bo) this.start();
+            else this.end();
+        }
+
+        function end() {
+            alert("게임을 종료합니다.");
+            location.reload();
+        }
+    </script>
+</body>
+</html>

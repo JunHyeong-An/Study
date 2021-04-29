@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcGrade() {
+            var grade;
+            var score = document.getElementById("score").value;
+
+            if(score >= 90) {
+                grade = 'A';
+                console.log(grade);
+                console.log("score" + score);
+            }
+            else if(score >= 80) {
+                grade = 'B';
+                console.log(grade);
+                console.log("score" + score);
+            }
+            else if(score >= 70) {
+                grade = 'C';
+                console.log(grade);
+                console.log("score" + score);
+            }
+            else if(score >= 60) {
+                grade = 'D';
+                console.log(grade);
+                console.log("score" + score);
+            } 
+            else {
+                grade = 'F';
+                console.log(grade);
+                console.log("score" + score);
+            }
+
+            document.getElementById("result").value = grade;
+        }
+    </script>
+    점수입력 : 
+    <input id="score"> <br>
+    학점  : <input id="result"> <br>
+    <button onclick="calcGrade();">학점 계산</button>
+</body>
+</html>
