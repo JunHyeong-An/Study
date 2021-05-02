@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The best program is JavaScript and HTML5</h1>
+    
+    <script>
+        var str = "The best program is JavaScript and HTML5";
+        var ptn1 = /[a-b]/ig;
+        var ptn2 = /[aebr]/ig;
+        var ptn3 = /a/ig;
+        var ptn4 = /[0-9]/ig;
+        var ptn5 = /p|x|z|i/ig;
+        var ptn6 = /[pxzi]/ig;
+        var ptn7 = /a|e|b|r/ig;
+
+        document.write(str.match(ptn1) + "<br>");
+        document.write(str.match(ptn2) + "<br>");
+        document.write(str.match(ptn3) + "<br>");
+        document.write(str.match(ptn4) + "<br>");
+        document.write(str.match(ptn5) + "<br>");
+        document.write(str.match(ptn6) + "<br>");
+        document.write(str.match(ptn7) + "<br>");
+
+    </script>
+</body>
+</html>

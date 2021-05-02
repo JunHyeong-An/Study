@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Generate Random Number</h1>
+    <input type="button" value="게임시작!!" id="start" onclick="createAnswer()">
+    <div id="game" style="display: none;">
+        <input type="hidden" id="firstAnswer">
+        <input type="hidden" id="secondAnswer">
+        <input type="hidden" id="thirdAnswer">
+        <input type="hidden" id="fourthAnswer">
+
+        첫 번째수 : <input id="firstNum" readonly>
+        두 번째수 : <input id="secondNum" readonly>
+        세 번째수 : <input id="thirdNum" readonly>
+        네 번째수 : <input id="fourthNum" readonly><br><br>
+        <input type="button" value="Create" onclick="createNumber()">
+        <input type="button" value="Search" onclick="search()">
+        <hr>
+        strike : <input id="strike" readonly>
+        ball : <input id="ball" readonly>
+        count : <input id="count" readonly>
+        <hr>
+        정답 : <br>
+        첫 번째수 : <input id="firstInput">
+        두 번째수 : <input id="secondInput">
+        세 번째수 : <input id="thirdInput">
+        네 번째수 : <input id="fourthInput"><br>
+        <input type="button" value="정답!!" onclick="answer()"><br><br>
+        <input type="button" value="게임끝내기" onclick="endGame()">
+        <p id="isAnswer"></p>
+    </div>
+
+    <script>
+        var cnt = 0;
+
+        function createAnswer() {
+            var answer = [];
+            for(var i = 0; i < 4; i++) {
+                answer[i] = Math.floor((Math.random() * 10) % 10 + 1);
+
+                for(var j = 0; j < i; j++) {
+                    if(answer[j] == answer[i]) {
+                        i--;
+                        break;
+                    }
+                }
+            }
+            document.getElementById("firstAnswer").value = answer[0];
+            document.getElementById("secondAnswer").value = answer[1];
+            document.getElementById("thirdAnswer").value = answer[2];
+            document.getElementById("fourthAnswer").value = answer[3];
+
+            for(var a in answer) {
+                console.log("answer : " + answer[a]);
+            }
+            document.getElementById("game").style.display="block";
+            document.getElementById("start").style.display="none";
+        }
+
+        function createNumber() {
+            var numbers = [];
+            for(var i = 0; i < 4; i++) {
+                numbers[i] = Math.floor((Math.random() * 10) % 10 + 1);
+
+                for(var j = 0; j < i; j++) {
+                    if(numbers[j] == numbers[i]) {
+                        i--;
+                        break;
+                    }
+                }
+            }
+            console.log("numbers : " + numbers[0] + numbers[1] + numbers[2] + numbers[3]);
+            document.getElementById("firstNum").value=numbers[0];
+            document.getElementById("secondNum").value=numbers[1];
+            document.getElementById("thirdNum").value=numbers[2];
+            document.getElementById("fourthNum").value=numbers[3];
+        }
+
+        function search() {
+            var strike = 0;
+            var ball = 0;
+
+            var firstAnswer = document.getElementById("firstAnswer").value;
+            var secondAnswer = document.getElementById("secondAnswer").value;
+            var thirdAnswer = document.getElementById("thirdAnswer").value;
+            var fourthAnswer = document.getElementById("fourthAnswer").value;
+
+            var answer = [firstAnswer, secondAnswer, thirdAnswer, fourthAnswer];
+
+            var firstNum = document.getElementById("firstNum").value;
+            var secondNum = document.getElementById("secondNum").value;
+            var thirdNum = document.getElementById("thirdNum").value;
+            var fourthNum = document.getElementById("fourthNum").value;
+
+            var numbers = [firstNum, secondNum, thirdNum, fourthNum];
+
+            for(var i = 0; i < answer.length; i++) {
+                if(answer[i] == numbers[i]) strike++;
+                
+                for(var j = 0; j < numbers.length; j++) {
+                    if(numbers[j] == answer[i]) ball++;
+                }
+            }
+            cnt++;
+
+            document.getElementById("strike").value = strike;
+            document.getElementById("ball").value = ball;
+            document.getElementById("count").value = cnt;
+        }
+
+        function answer() {
+            var firstAnswer = document.getElementById("firstAnswer").value;
+            var secondAnswer = document.getElementById("secondAnswer").value;
+            var thirdAnswer = document.getElementById("thirdAnswer").value;
+            var fourthAnswer = document.getElementById("fourthAnswer").value;
+
+            var answer = [firstAnswer, secondAnswer, thirdAnswer, fourthAnswer];
+
+            var firstInput = document.getElementById("firstInput").value;
+            var secondInput = document.getElementById("secondInput").value;
+            var thirdInput = document.getElementById("thirdInput").value;
+            var fourthInput = document.getElementById("fourthInput").value;
+
+            var inputs = [firstInput, secondInput, thirdInput, fourthInput];
+            
+            var isAnswer = false;
+            var msg = null;
+
+            for(var i = 0; i < answer.length; i++) {
+                if(answer[i] == inputs[i]) isAnswer = true;
+                else isAnswer = false;
+            }
+
+            if(isAnswer) msg = "정답입니다!!";
+            else msg = "오답입니다..ㅜㅜ";
+
+            document.getElementById("isAnswer").innerHTML=msg;
+        }
+
+        function endGame() {
+            document.getElementById("game").style.display="none";
+            document.getElementById("start").style.display="inline";
+            location.reload();
+        }
+    </script>
+</body>
+</html>

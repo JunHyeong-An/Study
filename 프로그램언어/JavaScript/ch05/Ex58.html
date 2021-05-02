@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>주민등록번호 입력받기</h1>
+    <form name="idNumber">
+        주민등록번호 : <input id="idNum"><br>
+        <input type="button" onclick="search()" value="검색">
+        <p id="demo"></p>
+    </form>
+    
+    <script>
+        function search() {
+            var idNum = idNumber.idNum.value;
+            var ptn = /\d{6}-[12]\d{6}/;
+
+            if(ptn.test(idNum)) document.getElementById("demo").innerHTML=idNum;
+            else document.getElementById("demo").innerHTML = "올바르게 입력해주세요";
+        }
+    </script>
+</body>
+</html>

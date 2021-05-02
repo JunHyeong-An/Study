@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var object = {
+        name : "홍길동",
+        age : 23,
+
+        sayHello : function(blogName) {
+            alert(this.name +"의 " + blogName);
+        },
+
+        sayBye : function() {
+            alert(this.name + " : 이제 갈게요!");
+        }
+    };
+
+    object.sayHello("장보기");
+    document.write("이름 : " + object.name + "<br>");
+    document.write("나이 : " + object.age);
+    </script>
+
+    <button onclick="object.sayBye()">나간다</button>
+</body>
+</html>

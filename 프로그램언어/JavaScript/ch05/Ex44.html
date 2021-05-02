@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Total Survival Time</h2>
+    생년월일 <br>
+    Year : <input id="year"><br>
+    Month : <input id="month"><br>
+    Day : <input id="day"><br>
+    <input type="submit" onclick="calcDate()">
+
+    <p id="view"></p>
+    <script>
+        function calcDate() {
+            var year = document.getElementById("year").value;
+            var month = document.getElementById("month").value;
+            var day = document.getElementById("day").value;
+
+            var today = new Date();
+            var birth = new Date();
+            birth.setFullYear(year, month, day);
+
+            console.log(birth);
+
+            var birthTime = today.getTime() - birth.getTime();
+            console.log("birTime : " + birthTime);
+            var time = birthTime/1000/24/60/60;
+            document.getElementById("view").innerHTML=time;
+        }
+    </script>
+</body>
+</html>

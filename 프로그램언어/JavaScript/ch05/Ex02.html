@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var star = {
+            color : "red",
+            max_diameter : 30,
+            min_diameter : 10,
+
+            max_radius : function() {
+                var max_x = this.max_diameter/2;
+                return max_x;
+            },
+            min_radius : function() {
+                var min_x = this.min_diameter/2;
+                return min_x;
+            }
+        }
+
+        document.write("별의 색상 : " + star.color + "<br>");
+        document.write("별의 바깥 둘레 : " + star.max_diameter + "<br>");
+        document.write("별의 바깥 둘레 반지름 : " + star.max_radius() + "<br>");
+        document.write("별의 안쪽 둘레 : " + star.min_diameter + "<br>");
+        document.write("별의 안쪽 둘레 반지름 : " + star.min_radius() + "<br>");
+        document.getElementById("p").innerHTML="안녕";
+    </script>
+    <p id="p"></p>
+</body>
+</html>

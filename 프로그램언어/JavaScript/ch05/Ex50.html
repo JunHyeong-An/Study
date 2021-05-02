@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search and Replace method in RegExp...</h1>
+
+    <script>
+        var str = "Hello JavaScript Program...!";
+        var regSearch = str.search(/javascript/i);
+        document.write("Search : " + regSearch + "<br>");
+
+        var strSearch = str.search("javascript");
+        document.write("strSeach : " + strSearch + "<br>");
+
+        var regReplace = str.replace(/javascript/i, "HTML");
+        document.write("regReplace : " + regReplace + "<br>");
+
+        var strReplace = str.replace("javascript", "html");
+        document.write("strReplace : " + strReplace);
+    </script>
+</body>
+</html>

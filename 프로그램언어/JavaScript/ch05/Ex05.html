@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(model, color, speed) {
+            this.model = model;
+            this.color = color;
+            this.speed = speed;
+
+            this.break = function() {
+                this.speed -= 10;
+            }
+            this.accel = function() {
+                this.speed += 10;
+            }
+        };
+
+        var c1 = new Car("BMW", "black", 100);
+        
+        c1.blackBox = true;
+        c1.battery = 70;
+        c1.display = function() {
+            document.write("블랙박스 전원 : " + c1.blackBox + "<br> 블랙박스 배터리 잔량 : " + c1.battery + "<br>");
+        }
+        c1.display();
+
+        document.write(c1.blackBox);
+        document.write(c1.battery);
+
+    </script>
+</body>
+</html>

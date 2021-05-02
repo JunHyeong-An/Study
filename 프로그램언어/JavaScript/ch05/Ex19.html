@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fruits = ["사과", "바나나", "딸기", "레몬", "멜론", "복숭아"];
+
+        document.write(fruits + "<br>");
+        document.write(fruits.sort() + "<br>");
+
+        var numbers = [5, 4, 3, 6, 8, 2, 10, 300];
+
+        document.write(numbers + "<br>");
+        document.write(numbers.sort(function(a, b) {return a-b;}) + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The best program is javaScript</h1>
+
+    <script>
+        var str = "The best program is javaScript!";
+
+        var meta1 = /^j/ig;
+        var meta2 = /\w/ig;
+        var meta3 = /\W/ig;
+        var meta4 = /\d/ig;
+        var meta5 = /\D/ig;
+        var meta6 = /\s/ig;
+        var meta7 = /\S/ig;
+        var meta8 = /!$/ig;
+
+        document.write(str.match(meta1) +"<br>");
+        document.write(str.match(meta8) +"<br>");
+        document.write(str.match(meta2) +"<br>");
+        document.write(str.match(meta3) +"<br>");
+        document.write(str.match(meta4) +"<br>");
+        document.write(str.match(meta5) +"<br>");
+        document.write(str.match(meta6) +"<br>");
+        document.write(str.match(meta7) +"<br>");
+
+    </script>
+</body>
+</html>

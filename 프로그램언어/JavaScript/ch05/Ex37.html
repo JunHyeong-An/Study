@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var miliDay = new Date(1000000000000);
+        var stringDay = new Date("June 6, 2018, 9:00:00");
+        var numberDay = new Date(2018, 6, 6, 0,0,0);
+        
+        document.write("Date()는 오늘 날짜" + today + "<br>");
+        document.write("밀리초로 주어진 값의 날짜 : " + miliDay + "<br>");
+        document.write("문자열로 주어진 값의 날짜 : " + stringDay + "<br>");
+        document.write("연월일로 주어진 값의 날짜 : " + numberDay); 
+
+    </script>
+</body>
+</html>

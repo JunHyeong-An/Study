@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(model, color, speed) {
+            this.model = model;
+            this.color = color;
+            this.speed = speed;
+
+            this.break = function() {
+                document.write("브레이크!!<br>");
+                this.speed -= 10;
+            }
+            this.accel = function() {
+                document.write("가속!!<br>");
+                this.speed += 10;
+            }
+        }
+
+        var c1 = new Car("BMW", "red", 100);
+        var c2 = new Car("BENZ", "white", 120);
+
+        document.write("c1의 종류 : " + c1.model + "<br>");
+        document.write("c1의 색 : " + c1.color + "<br>");
+        document.write("c1의 속도 : " + c1.speed + "<br>");
+        c1.break();
+        document.write("c1의 속도 : " + c1.speed + "<br>");
+        c1.accel();
+        document.write("c1의 속도 : " + c1.speed + "<br>");
+
+        document.write("c2의 종류 : " + c2.model + "<br>");
+        document.write("c2의 색 : " + c2.color);
+        document.write("c2의 속도 : " + c2.speed + "<br>");
+        c2.break();
+        document.write("c2의 속도 : " + c2.speed + "<br>");
+        c2.accel();
+        document.write("c2의 속도 : " + c2.speed + "<br>");
+        
+
+    </script>
+</body>
+</html>

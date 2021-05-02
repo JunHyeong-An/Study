@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(model, color, speed) {
+            this.model = model;
+            this.color = color;
+            this.speed = speed;
+
+            this.break = function() {
+                this.speed -= 10;
+            }
+            this.accel = function() {
+                this.speed += 10;
+            }
+        }
+
+        c = new Car("BMW", "white", 100);
+        
+        for(var i in c) {
+            document.write(i + " : " + c[i]);
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>

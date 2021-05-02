@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(model, color, speed) {
+            this.model = model;
+            this.color = color;
+            this.speed = speed;
+
+            this.break = function() {
+                this.speed -= 10;
+            }
+            this.accel = function() {
+                this.speed += 10;
+            }
+        };
+
+        c1 = new Car("BMW", "black", 100);
+
+        document.write("차 기종 : " + c1.model + "<br> 차 색상 : " + c1.color + "<br> 차 속도 : " + c1.speed);
+        delete c1.color;
+        document.write("<br><br>차 기종 : " + c1.model + "<br> 차 색상 : " + c1.color + "<br> 차 속도 : " + c1.speed);
+    </script>
+</body>
+</html>

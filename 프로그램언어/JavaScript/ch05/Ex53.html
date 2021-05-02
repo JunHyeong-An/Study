@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Test and Exec and match</h1>
+
+    <script>
+        var str = "The best program is JavaScript";
+        var ptn = /Javascript/i;
+
+        document.write(ptn.test(str) + "<br>");
+        document.write(ptn.exec(str) + "<br>");
+        document.write(str.match(ptn));
+
+    </script>
+</body>
+</html>

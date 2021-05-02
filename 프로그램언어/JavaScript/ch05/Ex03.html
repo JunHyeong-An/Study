@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myCar = new Object();
+
+        myCar.type = "BMW";
+        myCar.color = "black";
+        myCar.speed = 100;
+        
+        myCar.break = function() {
+            document.write("브레이크!!" + "<br>");
+            this.speed -= 10;
+            document.write("차량 속도 : " + this.speed + "km/h<br>");
+        }
+        myCar.accel = function() {
+            document.write("가속!!" + "<br>");
+            this.speed += 10;
+            document.write("차량 속도 : " + this.speed + "km/h<br>");
+        }
+
+        document.write("차량 종류 : " + myCar.type + "<br>");
+        document.write("차량 색상 : " + myCar.color + "<br>");
+        document.write("차량 속도 : " + 100 + "km/h" + "<br>");
+
+        myCar.break();
+        myCar.break();
+        myCar.break();
+    </script>
+</body>
+</html>

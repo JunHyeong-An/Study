@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>---대여 기간의 경과일 산정---</p>
+    <p id="demo"></p>
+    <script>
+        function loan(videoName, name) {
+            this.videoName = videoName;
+            this.name = name;
+            this.date = new Date().toLocaleString();
+        }
+
+        var myLoan = new loan("가오갤", "홍길동");
+
+        document.getElementById("demo").innerHTML=myLoan.videoName;
+        document.write(myLoan.date);
+
+    </script>
+</body>
+</html>
