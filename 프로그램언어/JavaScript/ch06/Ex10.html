@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="moveWindow()">Move Window</button>
+
+    <script>
+        var myWindow;
+
+        function openWindow() {
+            myWindow = window.open("", "myWindow", "width=200, height=500");
+            myWindow.document.write("새창!!");
+        }
+
+        function moveWindow() {
+            myWindow.window.moveTo(500, 500);
+            myWindow.focus();
+        }
+    </script>
+    
+</body>
+</html>
