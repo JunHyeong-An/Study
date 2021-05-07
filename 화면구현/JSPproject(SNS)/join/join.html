@@ -12,31 +12,37 @@
     <div id="wrap">
         <div id="joinTitle">Join Page</div>
         <div id="joinBox">
-            <form>
+            <form action="joinProc.jsp" id="joinForm">
                 <div class="inputDiv">
-                    <input type="text" class="inputs" name="name" placeholder="NAME">
+                    <input type="text" class="inputs" id="name" name="name" placeholder="NAME">
                 </div>
-    
+                <div class="notice" id="noticeName"></div>
+
                 <div class="inputDiv">
-                    <input type="date" class="inputs" name="birth" placeholder="DATE OF BIRTH">
+                    <input type="date" class="inputs" id="birth" name="birth" placeholder="DATE OF BIRTH">
                 </div>
-    
+                <div class="notice" id="noticeBirth"></div>
+                
                 <div class="inputDiv">
-                    <input type="text" class="inputs" name="id" placeholder="ID">
+                    <input type="text" class="inputs" id="id" name="id" placeholder="ID">
                 </div>
-    
+                <div class="notice" id="noticeId"></div>
+
                 <div class="inputDiv">
-                    <input type="password" class="inputs" name="pw" placeholder="PASSWORD">
+                    <input type="password" class="inputs" id="pw" name="pw" placeholder="PASSWORD">
                 </div>
-    
+                <div class="notice" id="noticePw"></div>
+
                 <div class="inputDiv">
-                    <input type="password" class="inputs" name="rePw" placeholder="VERIFY YOUR">
+                    <input type="password" class="inputs" id="rePw" name="rePw" placeholder="VERIFY YOUR">
                 </div>
+                <div class="notice" id="noticeRePw"></div>
                 <div id="btnBox">
                     <div id="joinBtn">Join!</div>
                 </div>
             </form>
         </div>
     </div>
+    <script src="js/join.js"></script>
 </body>
 </html>

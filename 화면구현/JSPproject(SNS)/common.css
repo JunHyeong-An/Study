@@ -49,7 +49,10 @@ table {
 }
 
 /*reset end*/
-/*font*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 body {
     font-family: 'Oswald', sans-serif;
@@ -58,11 +61,20 @@ body {
 input[type='button'] {
     cursor: pointer;
 }
+
+.notice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+
+    color: red;
+    font-size: 14px;
+}
+
 .inputDiv {
     display: flex;
     justify-content: center;
-
-    margin-bottom: 20px;
 
     width: 350px;
     height: 50px;

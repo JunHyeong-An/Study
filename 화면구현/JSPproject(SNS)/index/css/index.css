@@ -88,7 +88,7 @@ header {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    background-color: lightgray;
+    background-color: rgb(238, 238, 238);
 }
 
 #logo {
@@ -98,11 +98,14 @@ header {
 main {
     border-top-left-radius: 70px;
     border-top-right-radius: 70px;
-    background-color: lightgray;  
+    background-color: rgb(238, 238, 238); 
 }
 
 #contentList {
+    
     height: 600px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
     overflow-y: scroll;
 }
 
@@ -114,20 +117,22 @@ main {
     background-color: white;
 }
 
-#contentBox {
+/* -------컨텐츠 상자(다른사람)--------*/
+.contentBox {
     display: flex;
     align-items: center;
 
+    margin: 10px 0;
     margin-left: 20px;
-    margin-bottom: 20px;
     width: 800px;
 }
 
-#user {
+.user {
     margin-right: 20px;
+    font-size: 20pt;
 }
 
-#content {
+.content {
     display: flex;
     flex-flow: column;
 
@@ -139,16 +144,85 @@ main {
     font-size: 14pt;
 }
 
-#user {
-    font-size: 20pt;
-}
-
-#comment {
+.comment {
     margin-top: 10px;
     border-top: 1px solid lightgray;
     color: gray;
 }
+/*-----------------------------------------*/
+.MyContentBoxLocation {
+    display: flex;
+    justify-content: flex-end;
+}
+/* -------컨텐츠 상자(내가 쓴 글)--------*/
 
+.MyContentBox {
+    display: flex;
+    align-items: center;
+    
+    margin: 10px 0;
+    margin-left: 20px;
+    width: 800px;
+}
+
+.MyName {
+    margin: 0 20px;
+    font-size: 20pt;
+}
+
+.MyContent {
+    display: flex;
+    flex-flow: column;
+
+    line-height: 30px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgb(245, 245, 200);
+
+    font-size: 14pt;
+}
+
+.comment {
+    margin-top: 10px;
+    border-top: 1px solid lightgray;
+    color: gray;
+    cursor: pointer;
+    user-select: none;
+}
+
+.MyContent {
+    display: flex;
+    flex-flow: column;
+
+    line-height: 30px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgb(245, 245, 200);
+
+    font-size: 14pt;
+}
+
+
+/*-----------------------------------*/
+
+/*--------- 댓글 ---------------------*/
+.commentList {
+    display: none;
+    background-color: lightgray;
+    border-radius: 15px;
+}
+.commentBox {
+    margin: 5px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    font-size: 12pt;
+}
+
+.commentInput {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+/*-----------------------------------*/
 #insertContent {
     display: flex;
     align-items: center;
@@ -169,12 +243,22 @@ main {
     align-items: center;
 }
 
+#writeForm {
+    display: flex;
+    flex-flow: column;
+}
+
 #writeContent {
     resize: none;
+    padding: 10px 0;
+    padding-left: 30px;
     width: 1000px;
-    height: 200px;
+    height: 100px;
     border: none;
     outline: none;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 15pt;
 }
 
 #circle {
@@ -192,4 +276,8 @@ main {
 
 #attachment:hover {
     text-decoration: underline;
+}
+
+#writeContent {
+    border-radius: 50px;
 }

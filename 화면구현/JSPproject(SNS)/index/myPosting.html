@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="myProfile">
+            <div id="profilePic">
+                <img alt="photo in here" src="css/joinSuccess.png" width="300px" height="500px">
+            </div>
+            <div id="userName">
+                Miley Cyrus
+            </div>
+
+            <div id="account">
+                <a href="myInfo.html">Account</a>
+            </div>
+        </aside>
+
+        <div id="backgroundOfMain">
+            <header>
+                <ul id="nav">
+                    <li><span id="main"><a href="index.html">main</a></span></li>
+                    <li><span id="myPosting"><a href="myPosting.html">my posting</a></span></li>
+                </ul>
+                <div id="search">
+                    <form action="" id="searchForm" name="searchForm">
+                        <input type="text" class="inputs" id="searchBar" name="searchName"
+                            placeholder="Find your Friends">
+                        <div id="searchBtn">
+                            GO!
+                        </div>
+                    </form>
+                </div>
+                <div id="logo">
+                    ITSTAGRAM
+                </div>
+            </header>
+            
+            <main>
+                <div id="contentList">
+                    <!-- 글 들어가는 곳(반복) -->
+                    <!-- 내가 쓴 글 -->
+                    <div class="MyContentBoxLocation">
+                        <div class="MyContentBox">
+                            <div class="MyContent">
+                                <p class="title">TITLE</p>
+                                <p class="writeDate">writeDate</p>
+                                <p class="MyContent">
+                                    Eu dolore amet nostrud deserunt fugiat adipisicing ipsum dolore anim pariatur tempor.
+                                    Officia adipisicing incididunt elit nisi aliquip enim quis nisi pariatur minim ipsum
+                                    dolore esse. Sunt ut amet veniam dolore. Ipsum mollit aliqua culpa laboris deserunt
+                                    cillum sit. Est reprehenderit qui voluptate aliquip consequat id id consequat Lorem sit
+                                    ut. Cupidatat occaecat do eu magna et consectetur fugiat mollit est do.
+                                </p>
+                                <div class="comment">comment</div>
+                                <div class="commentList">
+                                    <div class="commentBox">
+                                        <p class="commentWriter">wrtier</p>
+                                        <p class="commentWriteDate">writeDate</p>
+                                        <p class="commentContent">Labore minim eu dolor amet laborum ea reprehenderit nulla magna.</p>
+                                        
+                                    </div>
+                                    <div class="commentBox">
+                                        <p class="commentWriter">wrtier</p>
+                                        <p class="commentWriteDate">writeDate</p>
+                                        <p class="commentContent">Labore minim eu dolor amet laborum ea reprehenderit nulla magna.</p>
+                                    </div>
+                                    <div class="commentInput">
+                                        <form id="commentForm">
+                                            <input type="text" class="inputs" name="comment" placeholder="write comment!!">
+                                        </form>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="MyName">MyName</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 글 들어가는 곳(반복) -->    
+                </div>
+                
+                <!-- 글쓰는 곳 -->
+                <div id="insertContent">
+                    <div id="insertInfo">
+                        <div id="circle">
+                            Me
+                        </div>
+                        <div id="attachment">Attachment</div>
+                </div>
+                    <form id="writeForm">
+                        <input type="text" class="inputs" name="title" placeholder="TITLE">
+                        <textarea id="writeContent" name="content" placeholder="What do you think?"></textarea>
+                        <input type="hidden" name="id">
+                    </form>
+            </main>
+        </div>
+    </div>
+    <script src="js/myPosting.js"></script>
+</body>
+</html>

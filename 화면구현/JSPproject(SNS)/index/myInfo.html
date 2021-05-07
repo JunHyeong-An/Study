@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/myInfo.css">
+</head>
+<body>
+    <div id="wrap">
+        <aside id="myProfile">
+            <div id="profilePic">
+                <img alt="photo in here" src="css/joinSuccess.png" width="300px" height="500px">
+            </div>
+            <div id="userName">
+                Miley Cyrus
+            </div>
+
+            <div id="account">
+                <a href="logoutProc.jsp">Log out</a>
+            </div>
+        </aside>
+
+        <div id="backgroundOfMain">
+            <header>
+                <ul id="nav">
+                    <li><span><a href="index.html">main</a></span></li>
+                    <li><span>my posting</span></li>
+                </ul>
+                <div id="search">
+                    <form action="" id="searchForm" name="searchForm">
+                        <input type="text" class="inputs" id="searchBar" name="searchName"
+                            placeholder="Find your Friends">
+                        <div id="searchBtn">
+                            GO!
+                        </div>
+                    </form>
+                </div>
+                <div id="logo">
+                    ITSTAGRAM
+                </div>
+            </header>
+            
+            <main>
+                <div id="myInfo">
+                    <div id="name">userName</div>
+                    <div id="info">
+                        <table>
+                            <tr>
+                                <td>age</td> <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>userName</td> <td>userName</td>
+                            </tr>
+                            <tr>
+                                <td>email address</td> <td>userName@google.com</td>
+                            </tr>
+                        </table>
+                        <textarea id="introduceWrite" placeholder="Introduce yourself..."></textarea>
+                        <div id="submitDiv">
+                            <div id="submitBtn">
+                                submit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside id="changePw">
+                    <form id="changePwForm">
+                        <div id="changePwTitle">Change Password</div>
+                        <input type="password" class="chPwInputs" placeholder="password" name="pw">
+                        <input type="password" class="chPwInputs" placeholder="new password" name="newPw">
+                        <input type="password" class="chPwInputs" placeholder="verify password" name="reNewPw">
+                        <div id="changePwFormSubmit">
+                            submit
+                        </div>
+                        <div id="asideBtns">
+                            <div class="changePwBtns" id="manage">
+                                Manage
+                            </div>
+                            <div class="changePwBtns" id="leave">
+                                Leave
+                            </div>
+                        </div>
+                    </form>                    
+                </aside>
+            </main>
+        </div>
+    </div>
+    <script src="js/myInfo.js"></script>
+</body>
+</html>

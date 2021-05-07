@@ -21,15 +21,15 @@
             </div>
 
             <div id="account">
-                Account
+                <a href="myInfo.html">Account</a>
             </div>
         </aside>
 
         <div id="backgroundOfMain">
             <header>
                 <ul id="nav">
-                    <li><span>main</span></li>
-                    <li><span>my posting</span></li>
+                    <li><span id="main"><a href="index.html">main</a></span></li>
+                    <li><span id="myPosting"><a href="myPosting.html">my posting</a></span></li>
                 </ul>
                 <div id="search">
                     <form action="" id="searchForm" name="searchForm">
@@ -47,44 +47,134 @@
             
             <main>
                 <div id="contentList">
-
                     <!-- 글 들어가는 곳(반복) -->
-                    <div id="contentBox">
-                        <div id="user">username</div>
-                        <div id="content">
-                            <p id="title">TITLE</p>
-                            <p id="writeDate">writeDate</p>
-                            <p id="content">
+                    <div class="contentBox">
+                        <div class="user">username</div>
+                        <div class="content">
+                            <p class="title">TITLE</p>
+                            <p class="writeDate">writeDate</p>
+                            <p class="content">
                                 Eu dolore amet nostrud deserunt fugiat adipisicing ipsum dolore anim pariatur tempor.
                                 Officia adipisicing incididunt elit nisi aliquip enim quis nisi pariatur minim ipsum
                                 dolore esse. Sunt ut amet veniam dolore. Ipsum mollit aliqua culpa laboris deserunt
                                 cillum sit. Est reprehenderit qui voluptate aliquip consequat id id consequat Lorem sit
                                 ut. Cupidatat occaecat do eu magna et consectetur fugiat mollit est do.
                             </p>
-                            <div id="comment">comment</div>
+                            <div class="comment">comment</div>
+                            <div class="commentList">
+                                <div class="commentBox">
+                                    <p class="commentWriter">wrtier</p>
+                                    <p class="commentWriteDate">writeDate</p>
+                                    <p class="commentContent">Labore minim eu dolor amet laborum ea reprehenderit nulla magna.</p>
+                                    
+                                </div>
+                                <div class="commentBox">
+                                    <p class="commentWriter">wrtier</p>
+                                    <p class="commentWriteDate">writeDate</p>
+                                    <p class="commentContent">Labore minim eu dolor amet laborum ea reprehenderit nulla magna.</p>
+                                </div>
+                                <div class="commentInput">
+                                    <form id="commentForm">
+                                        <input type="text" class="inputs" name="comment" placeholder="write comment!!">
+                                    </form>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                     <!-- 글 들어가는 곳(반복) -->
-                    <div id="contentBox">
-                        <div id="user">username</div>
-                        <div id="content">
-                            <p id="title">TITLE</p>
-                            <p id="writeDate">writeDate</p>
-                            <p id="content">
+                    <div class="contentBox">
+                        <div class="user">username</div>
+                        <div class="content">
+                            <p class="title">TITLE</p>
+                            <p class="writeDate">writeDate</p>
+                            <p class="content">
                                 Velit eu ipsum minim id.
                             </p>
-                            <div id="comment">comment</div>
+                            <div class="comment">comment</div>
+                            <div class="commentList">
+                                <div class="commentBox">
+                                    <p class="commentWriter">wrtier</p>
+                                    <p class="commentWriteDate">writeDate</p>
+                                    <p class="commentContent">Labore minim eu dolor amet laborum ea reprehenderit nulla magna.</p>
+                                    
+                                </div>
+                                <div class="commentBox">
+                                    <p class="commentWriter">wrtier</p>
+                                    <p class="commentWriteDate">writeDate</p>
+                                    <p class="commentContent">Labore minim eu dolor amet laborum ea reprehenderit nulla magna.</p>
+                                </div>
+                                <div class="commentInput">
+                                    <form id="commentForm">
+                                        <input type="text" class="inputs" name="comment" placeholder="write comment!!">
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id="contentBox">
-                        <div id="user">username</div>
-                        <div id="content">
-                            <p id="title">TITLE</p>
-                            <p id="writeDate">writeDate</p>
-                            <p id="content">
+
+                    <div class="MyContentBoxLocation">
+                        <div class="MyContentBox">
+                            <div class="MyContent">
+                                <p class="title">TITLE</p>
+                                <p class="writeDate">writeDate</p>
+                                <p class="MyContent">
+                                    Eu dolore amet nostrud deserunt fugiat adipisicing ipsum dolore anim pariatur tempor.
+                                    Officia adipisicing incididunt elit nisi aliquip enim quis nisi pariatur minim ipsum
+                                    dolore esse. Sunt ut amet veniam dolore. Ipsum mollit aliqua culpa laboris deserunt
+                                    cillum sit. Est reprehenderit qui voluptate aliquip consequat id id consequat Lorem sit
+                                    ut. Cupidatat occaecat do eu magna et consectetur fugiat mollit est do.
+                                </p>
+                                <div class="comment">comment</div>
+                                <div class="commentList">
+                                    <div class="commentBox">
+                                        <p class="commentWriter">wrtier</p>
+                                        <p class="commentWriteDate">writeDate</p>
+                                        <p class="commentContent">Labore minim eu dolor amet laborum ea reprehenderit nulla magna.</p>
+                                        
+                                    </div>
+                                    <div class="commentBox">
+                                        <p class="commentWriter">wrtier</p>
+                                        <p class="commentWriteDate">writeDate</p>
+                                        <p class="commentContent">Labore minim eu dolor amet laborum ea reprehenderit nulla magna.</p>
+                                    </div>
+                                    <div class="commentInput">
+                                        <form id="commentForm">
+                                            <input type="text" class="inputs" name="comment" placeholder="write comment!!">
+                                        </form>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="MyName">MyName</div>
+                        </div>
+                    </div>
+
+                    <div class="contentBox">
+                        <div class="user">username</div>
+                        <div class="content">
+                            <p class="title">TITLE</p>
+                            <p class="writeDate">writeDate</p>
+                            <p class="content">
                                 Velit eu ipsum minim id.
                             </p>
-                            <div id="comment">comment</div>
+                            <div class="comment">comment</div>
+                            <div class="commentList">
+                                <div class="commentBox">
+                                    <p class="commentWriter">wrtier</p>
+                                    <p class="commentWriteDate">writeDate</p>
+                                    <p class="commentContent">Labore minim eu dolor amet laborum ea reprehenderit nulla magna.</p>
+                                    
+                                </div>
+                                <div class="commentBox">
+                                    <p class="commentWriter">wrtier</p>
+                                    <p class="commentWriteDate">writeDate</p>
+                                    <p class="commentContent">Labore minim eu dolor amet laborum ea reprehenderit nulla magna.</p>
+                                </div>
+                                <div class="commentInput">
+                                    <form id="commentForm">
+                                        <input type="text" class="inputs" name="comment" placeholder="write comment!!">
+                                    </form>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                     <!-- 글쓰는 곳 -->
@@ -97,11 +187,14 @@
                         </div>
                         <div id="attachment">Attachment</div>
                 </div>
-                    <form>
-                        <textarea id="writeContent" name="content"></textarea>
+                    <form id="writeForm">
+                        <input type="text" class="inputs" name="title" placeholder="TITLE">
+                        <textarea id="writeContent" name="content" placeholder="What do you think?"></textarea>
+                        <input type="hidden" name="id">
                     </form>
             </main>
         </div>
     </div>
+    <script src="js/index.js"></script>
 </body>
 </html>
