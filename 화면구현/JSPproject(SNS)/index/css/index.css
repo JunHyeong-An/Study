@@ -1,0 +1,195 @@
+img {
+    object-fit: cover;
+}
+
+#wrap {
+    display: flex;  
+}
+
+aside {
+    display: flex;
+    flex-flow: column;
+    align-items: center;   
+    width: 300px;
+}
+
+#profilePic {
+    margin-top: 100px;
+    height: 500px;
+}
+
+#userName {
+    font-size: 30pt;
+    margin-top: 30px;
+}
+
+#account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+    height: 60px;
+
+    margin-top: 30px;
+
+    background-color: rgb(175, 212, 133);
+    border-radius: 35px;
+
+    font-size: 20pt;
+}
+
+#backgroundOfMain {
+    box-sizing: border-box; 
+    background-color: rgb(120, 183, 187); 
+    width: 1620px;;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;  
+
+    margin: 0 20px;
+    margin-bottom: 10px;
+}
+
+#nav {
+    display: flex;  
+    align-items: flex-end;
+}
+
+#nav li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    width: 150px;
+    font-size: 20pt;
+}
+
+#nav li span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#searchForm {
+
+    display: flex;
+}
+
+#searchBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: lightgray;
+}
+
+#logo {
+    font-size: 50pt;
+}
+
+main {
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    background-color: lightgray;  
+}
+
+#contentList {
+    height: 600px;
+    overflow-y: scroll;
+}
+
+#contentList::-webkit-scrollbar {
+    width: 10px;
+}
+
+#contentList::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+#contentBox {
+    display: flex;
+    align-items: center;
+
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 800px;
+}
+
+#user {
+    margin-right: 20px;
+}
+
+#content {
+    display: flex;
+    flex-flow: column;
+
+    line-height: 30px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+
+    font-size: 14pt;
+}
+
+#user {
+    font-size: 20pt;
+}
+
+#comment {
+    margin-top: 10px;
+    border-top: 1px solid lightgray;
+    color: gray;
+}
+
+#insertContent {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 30px;
+
+    padding-bottom: 25px;
+
+    box-shadow: 0px -1px 5px gray;
+}
+
+#insertInfo {
+    margin-right: 30px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#writeContent {
+    resize: none;
+    width: 1000px;
+    height: 200px;
+    border: none;
+    outline: none;
+}
+
+#circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    width: 90px;
+    height: 90px;
+    background-color: rgb(242, 225, 179);
+    border-radius: 45px;
+}
+
+#attachment:hover {
+    text-decoration: underline;
+}

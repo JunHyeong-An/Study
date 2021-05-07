@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+#wrap {
+    position: relative;
+
+    margin: 70px auto;
+
+    width: 500px;
+    height: 750px;
+
+    padding: 0 20px;
+    padding-top: 50px;
+
+    font-size: 23pt;
+
+    border-radius: 50px;
+    background-color: rgb(238, 238, 238);
+}
+
+#welecomeMsg {
+    margin: 50px 0;
+
+    line-height: 130px;
+    font-size: 90pt;
+    font-weight: 500;
+}
+
+#userName {
+    width: 540px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#subWelecomMsg {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 50px;
+    letter-spacing: 3px;
+}
+
+#loginBtn {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 70px;
+}
+
+#toLoginPage {
+    position: absolute;
+    bottom: 100px;
+    left: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 120px;
+    border-radius: 60px;
+
+    font-family: 'Shrikhand', cursive;
+    color: white;
+    background-color: black;
+}
+/* FAIL */
+#FailMsg {
+    margin-top: 100px;
+
+    line-height: 130px;
+    font-size: 90pt;
+    font-weight: 500;
+}
+
+#subFailMsg {
+    margin-top: 80px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 50px;
+    letter-spacing: 3px;
+}
