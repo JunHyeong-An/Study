@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            font-size: 15pt;
+
+            background-color: rosybrown;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)">
+        Click me!!
+    </div>
+
+    <script>
+        function mDown(obj) {
+            obj.innerHTML='Realse me..';
+        }
+
+        function mUp(obj) {
+            obj.innerHTML='Thank you';
+        }
+    </script>
+</body>
+</html>

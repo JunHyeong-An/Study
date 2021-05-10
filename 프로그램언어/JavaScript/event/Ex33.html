@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+
+            font-size: 20pt;
+            font-weight: bold;
+
+            justify-content: center;
+            align-items: center;
+
+            background-color: rosybrown;
+            width: 250px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div onmouseover="mOver()" onmouseout="mOut()" id="outDiv">
+        <h1 id="inner">First display!!</h1>
+    </div>
+
+    <script>
+        function mOver() {
+            document.getElementById("inner").innerHTML = "Thank you!"
+        }
+
+        function mOut() {
+            obj.innerHTML = "Bye~~"
+        }
+
+
+    </script>
+</body>
+</html>

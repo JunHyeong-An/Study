@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click the button to display the date</p>
+    <button id="btn">the Time is?</button>
+    <button id="stop">stop</button>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("btn").onclick = start;
+        document.getElementById("stop").onclick = stop;
+        var startId
+
+        function printTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var time = h + ":" + m +":" + s;
+
+            document.getElementById("demo").innerHTML = time;
+        }
+
+        function start() {
+            startId = setInterval(printTime, 1000);
+        }
+
+        function stop() {
+            clearInterval(startId);
+        }
+
+    </script>
+</body>
+</html>

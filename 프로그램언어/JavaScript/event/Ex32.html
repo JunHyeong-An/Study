@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter your name : <input id="fname" onchange="myFunction()" placeholder="입력">
+    <p id="warn"></p>
+    <p>transforms the input text to upper case</p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("fname");
+            
+            if(x.value == "") {
+                document.getElementById("warn").innerHTML="값을 입력해주세요";
+            }
+            else {
+                x.value = x.value.toUpperCase();
+            }
+        }
+    </script>
+</body>
+</html>
