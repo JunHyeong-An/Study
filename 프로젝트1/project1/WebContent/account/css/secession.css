@@ -1,0 +1,48 @@
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+#secessionTitle {
+	font-size: 15pt;
+	font-weight: bold;
+}
+
+#announce {
+	margin-top: 20px;
+	font-size: 12pt;
+	color: red;
+}
+
+#secessionForm {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.secessionInput {
+	height: 30px;
+	margin-top: 40px;
+}
+
+#secessionPw {
+	margin-bottom: 40px;
+}
+
+.changePwBtns {
+    font-size: 15pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+#leave {
+    color: white;
+    background-color: black;
+    margin-bottom: 400px;
+}

@@ -1,0 +1,68 @@
+#settingForm {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.settingDiv {
+    display: flex;
+    flex-flow: column;
+    width: 300px;
+
+    border-radius: 15px;
+    background-color: white;
+
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 12pt; 
+    font-weight: bold;
+    
+    margin: 10px 5px;
+    margin-bottom: 20px;
+}
+
+#profilePic {
+    font-size: 11pt;
+    margin-bottom: 5px;
+}
+
+#introduce {
+    resize: none;
+    border: none;
+    outline: none;
+
+    height: 50px;
+    
+    margin-bottom: 15px;
+}
+
+#btnDiv {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#skipBox {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 40px;
+}
+
+#skipBtn {
+    font-family: 'Shrikhand', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    font-size: 25pt;
+    font-weight: 500;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    background-color: rgb(254, 235, 182);
+}

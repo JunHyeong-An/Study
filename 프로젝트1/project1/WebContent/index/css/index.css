@@ -1,0 +1,371 @@
+img {
+    object-fit: cover;
+}
+
+#wrap {
+    display: flex;  
+}
+
+aside {
+    display: flex;
+    flex-flow: column;
+    align-items: center;   
+    width: 300px;
+}
+
+#profilePic {
+    margin-top: 100px;
+    height: 500px;
+}
+
+#userName {
+    font-size: 30pt;
+    margin-top: 30px;
+}
+
+#account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+    height: 60px;
+
+    margin-top: 30px;
+
+    background-color: rgb(175, 212, 133);
+    border-radius: 35px;
+
+    font-size: 20pt;
+}
+
+#backgroundOfMain {
+    box-sizing: border-box; 
+    background-color: rgb(120, 183, 187); 
+    width: 1620px;;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;  
+
+    margin: 0 20px;
+    margin-bottom: 10px;
+}
+
+#nav {
+    display: flex;  
+    align-items: flex-end;
+}
+
+#nav li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    width: 150px;
+    font-size: 20pt;
+}
+
+#nav li span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/* 검색  */
+
+#searchForm {
+    display: flex;
+}
+
+#searchInput {
+	display: flex;
+	align-items: center;
+	
+	position: relative;
+	background-color: white;
+	
+	border-radius: 15px;
+	
+	/* 검색시작하면 나타냄 */
+/* 	border-bottom-left-radius: 0; */
+/* 	border-bottom-right-radius: 0; */
+}
+
+#searchResultList {
+	box-sizing: border-box;
+	
+	/* 검색시작하면 나타냄 */
+	display: none;
+	
+	position: absolute;
+	
+	top: 45px;
+	width: 332px;
+	padding: 10px 0;
+	font-size: 12pt;
+	
+	background-color: white;
+	border-radius: 15px;
+	
+	/* 검색시작하면 나타냄 */
+/* 	border-top-left-radius: 0; */
+/* 	border-top-right-radius: 0; */
+	
+	border-top: 1px solid lightgrey;
+}
+
+#searchBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(238, 238, 238);
+    
+    cursor: pointer;
+}
+
+.searchResult {
+	display: none;
+	align-items: center;
+	padding: 10px 10px;
+}
+
+.searchResult:hover {
+	background-color: lightgrey;
+}
+
+.searchEle {
+	margin-left: 15px;
+}
+
+#noResult {
+	display: none;
+	padding: 10px;
+}
+
+#moreSearchResult {
+	display: flex;
+	padding: 10px 0;
+	justify-content: center;
+	align-items: center;
+	color: blue;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+
+#logo {
+    font-size: 50pt;
+}
+
+main {
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    background-color: rgb(238, 238, 238); 
+}
+
+#contentList {
+    height: 600px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    overflow-y: scroll;
+}
+
+#contentList::-webkit-scrollbar {
+    width: 10px;
+}
+
+#contentList::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+/* -------而⑦뀗痢� �긽�옄(�떎瑜몄궗�엺)--------*/
+.contentBox {
+    display: flex;
+    align-items: center;
+
+    margin: 10px 0;
+    margin-left: 20px;
+    width: 800px;
+}
+
+.user {
+    margin-right: 20px;
+    font-size: 20pt;
+}
+
+.content {
+    display: flex;
+    flex-flow: column;
+
+    line-height: 30px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+
+    font-size: 14pt;
+}
+
+.comment {
+    margin-top: 10px;
+    border-top: 1px solid lightgray;
+    color: gray;
+}
+/*-----------------------------------------*/
+.MyContentBoxLocation {
+    display: flex;
+    justify-content: flex-end;
+}
+/* -------而⑦뀗痢� �긽�옄(�궡媛� �벖 湲�)--------*/
+
+.MyContentBox {
+    display: flex;
+    align-items: center;
+    
+    margin: 10px 0;
+    margin-left: 20px;
+    width: 800px;
+}
+
+.MyName {
+    margin: 0 20px;
+    font-size: 20pt;
+}
+
+.MyContent {
+    display: flex;
+    flex-flow: column;
+
+    line-height: 30px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgb(245, 245, 200);
+
+    font-size: 14pt;
+}
+
+.comment {
+    margin-top: 10px;
+    border-top: 1px solid lightgray;
+    color: gray;
+    cursor: pointer;
+    user-select: none;
+}
+
+.MyContent {
+    display: flex;
+    flex-flow: column;
+
+    line-height: 30px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgb(245, 245, 200);
+
+    font-size: 14pt;
+}
+
+
+/*-----------------------------------*/
+
+/*--------- �뙎湲� ---------------------*/
+.commentList {
+    display: none;
+    background-color: lightgray;
+    border-radius: 15px;
+}
+.commentBox {
+    margin: 5px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    font-size: 12pt;
+}
+
+.commentInput {
+    margin-left: 20px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.commentForm {
+    display: flex;
+    align-items: center;
+}
+
+.commentBtn {
+    margin-left: 5px;
+
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+
+    border: none;
+    outline: none;
+}
+
+/*-----------------------------------*/
+#insertContent {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 30px;
+
+    padding-bottom: 25px;
+
+    box-shadow: 0px -1px 5px gray;
+}
+
+#insertInfo {
+    margin-right: 30px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#writeForm {
+    display: flex;
+    flex-flow: column;
+}
+
+#writeContent {
+    resize: none;
+    padding: 10px 0;
+    padding-left: 30px;
+    width: 1000px;
+    height: 100px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 15pt;
+}
+
+#circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    width: 90px;
+    height: 90px;
+    background-color: rgb(242, 225, 179);
+    border-radius: 45px;
+}
+
+#attachment:hover {
+    text-decoration: underline;
+}
+
+#writeContent {
+    border-radius: 50px;
+}

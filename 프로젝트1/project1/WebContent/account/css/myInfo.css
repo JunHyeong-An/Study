@@ -1,0 +1,133 @@
+main {
+    display: flex;
+    padding-top: 100px;
+}
+
+#info {
+    width: 500px;
+    font-size: 20pt;
+}
+
+#name {
+    width: 300px;
+    padding-left: 100px;
+    padding-bottom: 10px;
+    font-size: 33pt;
+    font-weight: bold;
+    border-bottom: 15px solid white;
+}
+
+table {
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 400px;
+}
+
+td {
+    padding: 10px 0;
+}
+
+.introduceWrite {
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 400px;
+    height: 300px;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 15pt;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#myInfoWrite {
+	margin-bottom: 190px;
+}
+
+#submitDiv {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+#submitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+
+    border-radius: 30px;
+    background-color: rgb(120, 183, 187);
+}
+
+#changePwForm {
+    margin-top: 100px;
+    margin-left: 800px;
+    width: 800px;
+    display: flex; 
+    flex-flow: column;
+    align-items: center;
+}
+
+#changePwTitle {
+    font-size: 30pt;
+    margin-bottom: 20px;
+}
+
+.chPwInputs {
+    box-sizing: border-box;
+    width: 200px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 13pt;
+}
+
+#changePwFormSubmit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 35px;
+    font-size: 18pt;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+.changePwBtns {
+    font-size: 15pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+#manage {
+    background-color: rgb(120, 183, 187);;
+}
+
+#leave {
+    color: white;
+    background-color: black;
+    margin-bottom: 160px;
+}
+
+.updateInput {
+	width: 200px;
+	margin-left: 10px;
+	font-size: 15pt;
+}
+
