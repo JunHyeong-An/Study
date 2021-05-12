@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Do dolor enim dolor eiusmod minim Lorem nulla ipsum consequat fugiat do ut ut.</p>
+
+    <div id="myDIV">
+        First statement...
+    </div>
+    <button onclick="myFunction()">Try it!</button>
+
+    <script>
+        function myFunction() {
+            var para = document.createElement("p");
+            var t = document.createTextNode("added statements...");
+            para.appendChild(t);
+            document.getElementById("myDIV").appendChild(para);
+        }
+    </script>
+</body>
+</html>

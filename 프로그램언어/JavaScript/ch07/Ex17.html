@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li id="item">Tea</li>
+        <li>Milk</li>
+    </ul>
+    <p>Remove the first item from the list.</p>
+
+    <button onclick="removeFirst()">remove</button>
+
+    <script>
+        function removeFirst() {
+            var x = document.getElementById("myList");
+            x.removeChild(x.childNodes[5]);
+        }
+    </script>
+</body>
+</html>

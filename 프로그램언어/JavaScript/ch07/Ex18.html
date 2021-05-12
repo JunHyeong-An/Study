@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li id="item">Tea</li>
+        <li>Milk</li>
+    </ul>
+    추가 할 음료 : <input type="text" id="drink">
+    <button onclick="appendList()">append</button>
+
+    <p>append the first item from the list.</p>
+
+    <script>
+        function appendList() {
+            var li = document.createElement("li");
+            var addDrinkName = document.getElementById("drink").value;
+            var text = document.createTextNode(addDrinkName);
+            
+            if(addDrinkName == '') {
+                alert('음료이름을 추가해주세요');
+                return;
+            }
+            li.appendChild(text);
+            document.getElementById("myList").appendChild(li);
+            document.getElementById("drink").value = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li id="item">Tea</li>
+        <li>Milk</li>
+    </ul>
+    <p>Replace the first item from the list.</p>
+
+    <button onclick="replaceFirst()">replace</button>
+
+    <script>
+        function replaceFirst() {
+            var elmnt = document.createElement("li");
+            var text = document.createTextNode("Water");
+
+            elmnt.appendChild(text);
+            var list = document.getElementById("myList");
+            list.replaceChild(elmnt, list.childNodes[1]);
+        }
+
+    </script>
+</body>
+</html>
