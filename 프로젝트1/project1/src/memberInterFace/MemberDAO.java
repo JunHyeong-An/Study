@@ -27,4 +27,13 @@ public interface MemberDAO {
 	
 	// 회원 목록 가져오기
 	public List<MemberDTO> getMemberList();
+	
+	// 비밀번호 변경
+	public boolean changePassword(String id, String pw, String newPw);
+	
+	// 유저 프로필 사진 불러오기
+	public String getUserProfilPic(String id);
+	
+	// 유저 이름 불러오기
+	public String getUserName(String id);
 }

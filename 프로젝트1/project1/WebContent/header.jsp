@@ -1,3 +1,5 @@
+<%@page import="comment.CommentDAO"%>
+<%@page import="board.BoardDAO"%>
 <%@page import="member.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -13,4 +15,6 @@
 </head>
 <%request.setCharacterEncoding("UTF-8"); %>
 <c:set var="memberDAO" value="<%=MemberDAO.getInstance() %>"/>
+<c:set var="boardDAO" value="<%=BoardDAO.getInstance() %>"/>
+<c:set var="commentDAO" value="<%=CommentDAO.getInstance() %>"/>
 <c:set var="path" value="${pageContext.request.contextPath }"/>

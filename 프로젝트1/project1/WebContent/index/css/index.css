@@ -2,6 +2,11 @@ img {
     object-fit: cover;
 }
 
+.contentImg {
+	max-width: 300px;
+	height: auto;
+}
+
 #wrap {
     display: flex;  
 }
@@ -24,6 +29,38 @@ aside {
 }
 
 #account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+    height: 60px;
+
+    margin-top: 30px;
+
+    background-color: rgb(175, 212, 133);
+    border-radius: 35px;
+
+    font-size: 20pt;
+}
+
+#account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+    height: 60px;
+
+    margin-top: 30px;
+
+    background-color: rgb(175, 212, 133);
+    border-radius: 35px;
+
+    font-size: 20pt;
+}
+
+#post {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,8 +224,12 @@ main {
 }
 
 /* -------而⑦뀗痢� �긽�옄(�떎瑜몄궗�엺)--------*/
+.box {
+	display: none;
+}
+
 .contentBox {
-    display: flex;
+    display: none;
     align-items: center;
 
     margin: 10px 0;
@@ -197,6 +238,9 @@ main {
 }
 
 .user {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
     margin-right: 20px;
     font-size: 20pt;
 }
@@ -213,6 +257,10 @@ main {
     font-size: 14pt;
 }
 
+.underMenu {
+	font-size: 11pt;
+}
+
 .comment {
     margin-top: 10px;
     border-top: 1px solid lightgray;
@@ -226,15 +274,14 @@ main {
 /* -------而⑦뀗痢� �긽�옄(�궡媛� �벖 湲�)--------*/
 
 .MyContentBox {
-    display: flex;
+    justify-content :flex-end;
     align-items: center;
-    
-    margin: 10px 0;
-    margin-left: 20px;
-    width: 800px;
 }
 
 .MyName {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
     margin: 0 20px;
     font-size: 20pt;
 }
@@ -257,18 +304,6 @@ main {
     color: gray;
     cursor: pointer;
     user-select: none;
-}
-
-.MyContent {
-    display: flex;
-    flex-flow: column;
-
-    line-height: 30px;
-    padding: 20px;
-    border-radius: 30px;
-    background-color: rgb(245, 245, 200);
-
-    font-size: 14pt;
 }
 
 
@@ -300,7 +335,7 @@ main {
 }
 
 .commentBtn {
-    margin-left: 5px;
+    margin: 0 10px;
 
     width: 50px;
     height: 25px;
@@ -310,6 +345,17 @@ main {
     outline: none;
 }
 
+.commentWriter {
+	display: flex;
+	align-items: center;
+}
+
+.commentImgStyle {
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
+}
+
 /*-----------------------------------*/
 #insertContent {
     display: flex;
@@ -317,7 +363,6 @@ main {
     padding-top: 30px;
     padding-left: 30px;
 
-    padding-bottom: 25px;
 
     box-shadow: 0px -1px 5px gray;
 }
@@ -360,6 +405,7 @@ main {
     height: 90px;
     background-color: rgb(242, 225, 179);
     border-radius: 45px;
+    overflow: hidden;
 }
 
 #attachment:hover {
@@ -368,4 +414,11 @@ main {
 
 #writeContent {
     border-radius: 50px;
+}
+
+.profileImg {
+	display: flex;
+	justify-content: center;
+	border-radius: 50%;
+	overflow: hidden;
 }

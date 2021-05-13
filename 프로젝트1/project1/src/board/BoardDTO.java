@@ -2,8 +2,8 @@ package board;
 
 public class BoardDTO {
 	private int idx;
-	private String writer, content, img, writeDate;
-	private char deleted;
+	private String writer, content, img, writeDate, deleted;
+	
 	public int getIdx() {
 		return idx;
 	}
@@ -34,12 +34,10 @@ public class BoardDTO {
 	public void setWriteDate(String writeDate) {
 		this.writeDate = writeDate;
 	}
-	public char getDeleted() {
+	public String getDeleted() {
 		return deleted;
 	}
-	public void setDeleted(char deleted) {
+	public void setDeleted(String deleted) {
 		this.deleted = deleted;
 	}
-	
-	
 }

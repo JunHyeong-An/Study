@@ -30,15 +30,7 @@
                     <li><span><a href="${path }/index/index.jsp">main</a></span></li>
                     <li><span>my posting</span></li>
                 </ul>
-                <div id="search">
-                    <form action="" id="searchForm" name="searchForm">
-                        <input type="text" class="inputs" id="searchBar" name="searchName"
-                            placeholder="Find your Friends">
-                        <div id="searchBtn">
-                            GO!
-                        </div>
-                    </form>
-                </div>
+                <%@ include file="../index/search.jsp" %>
                 <div id="logo">
                    <a href="${path }/index/index.jsp">ITSTAGRAM</a>
                 </div>
@@ -84,11 +76,14 @@
                     </div>
                 </div>
                 <aside id="changePw">
-                    <form id="changePwForm">
+                    <form action="changePwProc.jsp" method="post" id="changePwForm">
                         <div id="changePwTitle">Change Password</div>
-                        <input type="password" class="chPwInputs" placeholder="password" name="pw">
-                        <input type="password" class="chPwInputs" placeholder="new password" name="newPw">
-                        <input type="password" class="chPwInputs" placeholder="verify password" name="reNewPw">
+                        <input type="password" class="chPwInputs" placeholder="password" id="pw" name="pw">
+                        <p class="notice" id="pwNotice"></p>
+                        <input type="password" class="chPwInputs" placeholder="new password" id="newPw" name="newPw">
+                        <p class="notice" id="newPwNotice"></p>
+                        <input type="password" class="chPwInputs" placeholder="verify password" id="reNewPw">
+                        <p class="notice" id="ReNewPwNotice"></p>
                         <div id="changePwFormSubmit">
                             submit
                         </div>
@@ -98,5 +93,7 @@
         </div>
     </div>
     <script src="js/myInfo.js"></script>
+    <script src="js/changePw.js"></script>
+    <script src="../index/js/search.js"></script>
 </body>
 </html>

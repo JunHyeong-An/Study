@@ -7,6 +7,9 @@
 <c:if test="${empty user }">
 	<c:redirect url="../login/login.jsp"/>
 </c:if>
+<c:if test="${user.id eq param.id }">
+	<c:redirect url="myInfo.jsp"/>
+</c:if>
 <body>
     <div id="wrap">
         <aside id="myProfile">
@@ -22,7 +25,7 @@
             <header>
                 <ul id="nav">
                     <li><span><a href="${path }/index/index.jsp">main</a></span></li>
-                    <li><span>my posting</span></li>
+                    <li><span><a href="${path }/account/myInfo.jsp">my posting</a></span></li>
                 </ul>
                 
                 <%@ include file="../index/search.jsp" %>
@@ -50,7 +53,27 @@
                         <textarea class="introduceWrite" id="myInfoWrite" placeholder="Introduce yourself..." readonly>${otherUser.introduction }</textarea>
                     </div>
                 </div>
-            </main>
+                
+                <!-- 글목록 -->
+                <c:set var="boardList" value="${boardDAO.selectContentList() }"/>
+				<div id="userPostDiv">
+					<c:forEach var="post" items="${boardList }">
+						<div class="commentBox">
+							<p class="commentWriter">
+								<span class="commentImgStyle"> 
+									<img alt="img" src="${commentUserImg }" width="30px" height="30px">
+								</span> 
+								${post.writer }
+							</p>
+							<p class="commentWriteDate">${post.writeDate }</p>
+							<p class="commentContent">${post.content }</p>
+							<p class="underMenu">
+								<input type="hidden" value="${post.idx }" class="commentIdx">
+							</p>
+						</div>
+					</c:forEach>
+				</div>
+			</main>
         </div>
     </div>
 	<script src="../index/js/search.js"></script>

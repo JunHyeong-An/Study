@@ -253,4 +253,83 @@ public class MemberDAO implements memberInterFace.MemberDAO {
 		}
 		return list;
 	}
+	
+	public boolean changePassword(String id, String pw, String newPw) {
+		String sql = "update member set pw = ? where id = ? and pw = ?";
+		int result = 0;
+		boolean isPwChange = false;
+		
+		try {
+			con = ds.getConnection();
+			ps = con.prepareStatement(sql);
+			ps.setString(1, newPw);
+			ps.setString(2, id);
+			ps.setString(3, pw);
+			
+			result = ps.executeUpdate();
+			
+			if(result != 0) isPwChange = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return isPwChange;
+	}
+	
+	@Override
+	public String getUserProfilPic(String id) {
+		String sql = "select profilepic from member where id = ?";
+		String fileName = "";
+		try {
+			con = ds.getConnection();
+			ps = con.prepareStatement(sql);
+			ps.setString(1, id);
+			
+			rs = ps.executeQuery();
+			
+			if(rs.next()) {
+				fileName = rs.getString("profilepic");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return fileName;
+	}
+	
+	@Override
+	public String getUserName(String id) {
+		String sql = "select name from member where id = ?";
+		String name = "";
+		
+		try {
+			con = ds.getConnection();
+			ps = con.prepareStatement(sql);
+			ps.setString(1, id);
+			
+			rs = ps.executeQuery();
+			
+			if(rs.next()) name = rs.getString("name");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return name;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

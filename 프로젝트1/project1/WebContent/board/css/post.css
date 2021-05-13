@@ -1,0 +1,59 @@
+#postDiv {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 690px;
+    padding-top: 150px;
+}
+
+#fileDiv {
+    box-sizing: border-box;
+    width: 500px;
+    height: 110px;
+    margin-bottom: 50px;
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 50px;
+}
+
+#postFile {
+    width: 500px;
+}
+
+#postText {
+    resize: none;
+    width: 500px;
+    height: 250px;
+    border: none;
+    outline: none;
+}
+
+#postBtn {
+	width: 120px;
+	height: 60px;
+	border: none;
+	outline: none;
+	background-color: white;
+	border-radius: 30px;
+	font-size: 17pt;
+	font-weight: bold;
+}
+
+#textDiv {
+	box-sizing: border-box;
+	width: 500px;
+	border-radius: 50px;
+	background-color: white;
+	overflow: hidden;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+
+.postTitle {
+    margin-bottom: 10px;
+    font-size: 15pt;
+}
+
+#postText {
+    font-size: 12pt;
+}
