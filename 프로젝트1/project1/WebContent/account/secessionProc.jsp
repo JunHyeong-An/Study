@@ -9,9 +9,13 @@
 </head>
 <body>
 	<c:set var="isDelete" value="${memberDAO.secession(param.id, param.pw) }"/>
-	${isDelete }
-	<c:if test="${isDelete }">
-		<c:redirect url="../login/login.jsp"/>
-	</c:if>
+	<%session.invalidate(); %>
+	<script type="text/javascript">
+		alert('회원탈퇴가 완료되었습니다.');
+		setTimeout(() => {
+			location.href = '../login/login.jsp';	
+		}, 1);
+	</script>
+	
 </body>
 </html>

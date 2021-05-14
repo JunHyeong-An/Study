@@ -62,7 +62,7 @@
 		                                
 		                                <!--댓글 -->
 		                                <div class="comment">comment</div>
-		                                <div class="commentList">
+		                                <div class="commentList" style="display: none;">
 		                                	<c:set var="commentList" value="${commentDAO.getCommentList(content.idx) }"/>
 		                               		<c:if test="${not empty commentList }">
 	                               				<c:forEach var="comment" items="${commentList }">
@@ -129,7 +129,7 @@
             </main>
         </div>
     </div>
-	<script src="js/index.js"></script>
+	<script src="js/myPosting.js"></script>
 	<script src="js/paging.js"></script>
     <script src="js/search.js"></script>
 </body>

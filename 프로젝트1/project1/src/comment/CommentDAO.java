@@ -48,7 +48,7 @@ public class CommentDAO implements commentInterFace.CommentDAO {
 
 	@Override
 	public List<CommentDTO> getCommentList(int contentInx) {
-		String sql = "select * from commentTable where contentidx = ? and deleted = 'n'";
+		String sql = "select * from commentTable where contentidx = ? and deleted = 'n' order by writedate";
 		List<CommentDTO> list = null;
 		
 		try {

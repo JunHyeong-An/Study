@@ -65,6 +65,12 @@ let showList = () => {
 	}
 }
 
+function enterkey() { 
+	if (window.event.keyCode == 13) {
+		console.log(1);
+	}	
+}
+searchBar.onfocus = enterkey;
 searchBar.onkeyup = showList;
 document.getElementById("moreSearchResult").onclick = function() {
 	document.getElementById("searchForm").submit();

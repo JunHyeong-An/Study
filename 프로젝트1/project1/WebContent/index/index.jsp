@@ -62,7 +62,7 @@
 		                                
 		                                <!--댓글 -->
 		                                <div class="comment">comment</div>
-		                                <div class="commentList">
+		                                <div class="commentList" style="display: none;">
 		                                	<c:set var="commentList" value="${commentDAO.getCommentList(content.idx) }"/>
 		                               		<c:if test="${not empty commentList }">
 	                               				<c:forEach var="comment" items="${commentList }">
@@ -75,8 +75,10 @@
 				                                        <p class="commentWriteDate">${comment.writeDate }</p>
 				                                        <p class="commentContent">${comment.content }</p>
 				                                    	<p class="underMenu">
-				                                    		<span class="commentDelete">[삭제]</span>
-				                                    		<input type="hidden" value="${comment.idx }" class="commentIdx">
+				                                    		<c:if test="${comment.writer == user.id }">
+				                                    			<span class="commentDelete">[삭제]</span>
+				                                    			<input type="hidden" value="${comment.idx }" class="commentIdx">
+				                                    		</c:if>
 				                                    	</p>
 				                                 	</div>	
 	                               				</c:forEach>
@@ -96,7 +98,7 @@
 		                                        </form>
 		                                    </div>
 		                                </div> 
-		                                <!--댓글 -->
+		                                <!--댓글 끝 -->
 		                                
 		                            </div>
 		                            <div class="MyName">
@@ -134,9 +136,9 @@
 		                            </c:if>
 									<p class="content">${content.content }</p>
 									
-									<!--댓글 -->
+								<!--댓글 -->
 								<div class="comment">comment</div>
-								<div class="commentList">
+								<div class="commentList" style="display: none;">
 									<c:set var="commentList" value="${commentDAO.getCommentList(content.idx) }" />
 									<c:if test="${not empty commentList }">
 										<c:forEach var="comment" items="${commentList }">
@@ -152,8 +154,10 @@
 												<p class="commentContent">${comment.content }</p>
 												<c:if test="${user.id eq comment.writer }">
 													<p class="underMenu">
-														<span class="commentDelete">[삭제]</span> 
-														<input type="hidden" value="${comment.idx }" class="commentIdx">
+														<c:if test="${comment.writer == user.id }">
+															<span class="commentDelete">[삭제]</span> 
+															<input type="hidden" value="${comment.idx }" class="commentIdx">
+														</c:if>
 													</p>
 												</c:if>
 											</div>
@@ -181,6 +185,7 @@
 								</div>
 							</div>
 					</c:if>
+					<!-- 다른 사람이 쓴글 끝 -->
 					</c:forEach>
                 </div>
 				
@@ -198,6 +203,7 @@
                         <input type="hidden" value="${user.id }" name="writer">
                     </form>
                 </div>
+                <!-- 짧은 글 쓰기 끝 -->
             </main>
         </div>
     </div>

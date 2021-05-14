@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+img {
+    object-fit: cover;
+}
+
+.contentImg {
+	max-width: 300px;
+	height: auto;
+}
+
+.postDiv {
+	display: flex;
+	align-items: center;
+}
+
+#userPostDiv {
+	margin-left: 400px;
+	
+}
+
+#userPostingList {
+	height: 650px;
+	overflow: scroll;
+}
+
+#userPostingTitle {
+	font-size: 25pt;
+	margin-bottom: 20px;
+	margin-left: 5px
+}
+
+#userPostingList::-webkit-scrollbar {
+    width: 10px;
+}
+
+#userPostingList::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+.postBox {
+	background-color: white;
+	border-radius: 15px;
+	padding: 20px;
+	margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.name {
+	font-size: 16pt;
+    margin-bottom: 10px;
+}
+
+.writeDate {
+	margin-bottom: 10px;
+}
+
+/*댓글*/
+
+.comment {
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px solid lightgray;
+    color: gray;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/*-----------------------------------*/
+
+/*--------- �뙎湲� ---------------------*/
+.commentList {
+    display: none;
+    background-color: lightgray;
+    border-radius: 15px;
+}
+
+.commentBox {
+    margin: 5px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    font-size: 12pt;
+}
+
+.commentInput {
+    margin-left: 20px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.commentForm {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.commentBtn {
+    margin: 0 10px;
+
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+
+    border: none;
+    outline: none;
+}
+
+.commentWriter {
+	display: flex;
+	align-items: center;
+}
+
+.commentWriteDate {
+	margin: 10px;
+	font-size: 11px;
+	color: grey;
+}
+
+.commentImgStyle {
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
+}

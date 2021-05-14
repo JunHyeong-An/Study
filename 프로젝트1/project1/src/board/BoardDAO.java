@@ -137,7 +137,6 @@ public class BoardDAO implements boardInterFace.BoardDAO {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, uploader.getContent());
 			ps.setString(2, uploader.getImg());
-			ps.setInt(3, uploader.getIdx());
 			
 			result = ps.executeUpdate();
 			if(result != 0) isModify = true;

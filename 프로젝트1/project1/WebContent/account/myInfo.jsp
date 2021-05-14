@@ -25,7 +25,7 @@
             <header>
                 <ul id="nav">
                     <li><span><a href="${path }/index/index.jsp">main</a></span></li>
-                    <li><span>my posting</span></li>
+                    <li><span><a href="${path }/index/myPosting.jsp">my posting</a></span></li>
                 </ul>
                 
                 <%@ include file="../index/search.jsp" %>

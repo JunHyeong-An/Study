@@ -17,7 +17,6 @@ public class PostFileUploader {
 	private String writer;
 	private String content;
 	private String img;
-	private int idx;
 	
 	File file;
 	MultipartRequest multi = null;
@@ -31,7 +30,6 @@ public class PostFileUploader {
 			writer = multi.getParameter("writer");
 			content = multi.getParameter("postText");
 			img = path + multi.getFilesystemName("postFile");
-			idx = Integer.parseInt(multi.getParameter("idx"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -61,14 +59,4 @@ public class PostFileUploader {
 	public void setImg(String img) {
 		this.img = img;
 	}
-
-	public int getIdx() {
-		return idx;
-	}
-
-	public void setIdx(int idx) {
-		this.idx = idx;
-	}
-	
-	
 }

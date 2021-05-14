@@ -43,6 +43,14 @@ let login = () => {
     }
 }
 
+function enterkey() { 
+	if (window.event.keyCode == 13) {
+		console.log(1);
+		login();
+	}	
+}
+window.onkeyup = enterkey;
+
 document.getElementById("loginBtn").onclick = login;
 
 document.getElementById("joinBtn").onclick = function() {

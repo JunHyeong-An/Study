@@ -9,6 +9,8 @@
 </head>
 <body>
 	<c:set var="isInsertContent" value="${boardDAO.insertContent(param.writer, param.content) }"/>
-	<c:redirect url="../index/index.jsp"/>
+	<script type="text/javascript">
+			location.href = document.referrer;
+	</script>
 </body>
 </html>

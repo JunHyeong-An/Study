@@ -12,7 +12,9 @@
 	<jsp:setProperty property="*" name="commentDTO"/>
 	<c:set var="isInsert" value="${commentDAO.insertComment(commentDTO) }"/>
 	<c:if test="${isInsert }">
-		<c:redirect url="../index/index.jsp"/>
+		<script type="text/javascript">
+			location.href = document.referrer;
+		</script>
 	</c:if>
 </body>
 </html>

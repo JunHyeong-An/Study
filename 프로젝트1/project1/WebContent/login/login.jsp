@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
+<c:if test="${not empty user }">
+	<c:redirect url="../index/index.jsp"/>
+</c:if>
 <link rel="stylesheet" href="css/login.css">
 <body>
     <div id="wrap">

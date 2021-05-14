@@ -26,7 +26,7 @@
             <header>
                 <ul id="nav">
                     <li><span id="main"><a href="${path }/index/index.jsp">main</a></span></li>
-                    <li><span id="myPosting"><a href="${path }/index/myPosting.html">my posting</a></span></li>
+                    <li><span id="myPosting"><a href="${path }/index/myPosting.jsp">my posting</a></span></li>
                 </ul>
                 <%@ include file="search.jsp" %>
                 <div id="logo">

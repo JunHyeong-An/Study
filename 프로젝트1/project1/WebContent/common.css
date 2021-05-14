@@ -49,6 +49,10 @@ table {
 }
 
 /*reset end*/
+span {
+	cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: inherit;

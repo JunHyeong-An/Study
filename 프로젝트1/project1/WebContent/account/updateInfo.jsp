@@ -10,6 +10,9 @@
 <body>
 	<c:set var="isUpdate" value="${memberDAO.update(pageContext.request, user.id) }"/>
 	<c:if test="${isUpdate }">
+		<script type="text/javascript">
+			alert('다시 로그인 해주세요');
+		</script>
 		<c:redirect url="../login/logoutProc.jsp"/>	
 	</c:if>
 </body>
