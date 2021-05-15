@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../commons/imgs/무지.jpg" width="200px">
+    <img src="../commons/imgs/어피치.png"width="200px">
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <button onclick="myFunction()">Try me!!</button>
+
+    <script>
+        function myFunction() {
+            var x = document.images.length;
+            var y = document.images[0].src;
+            var z = document.images[1].src;
+
+            document.getElementById("demo1").innerHTML = x;
+            document.getElementById("demo2").innerHTML = y;
+            document.getElementById("demo3").innerHTML = z;
+
+        }
+    </script>
+</body>
+</html>

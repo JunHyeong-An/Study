@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <p>Lorem exercitation ea quis mollit magna nostrud ut.</p>
+        <p>Lorem incididunt aliqua exercitation ea occaecat ex dolore sint.</p>
+    </div>
+    <button onclick="insertNode()">Click Me!!</button>
+
+    <script>
+        function insertNode() {
+            var elm = document.createElement("p");
+            var text = document.createTextNode("This is New!!");
+
+            elm.appendChild(text);
+
+            var parent = document.getElementById("demo");
+            var child = parent.childNodes[2];
+
+            parent.insertBefore(elm, child);
+        }
+    </script>
+</body>
+</html>

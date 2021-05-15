@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="demo">
+            <p>Lorem exercitation ea quis mollit magna nostrud ut.</p>
+            <p>Lorem incididunt aliqua exercitation ea occaecat ex dolore sint.</p>
+        </div>
+
+        <script>
+            var para = document.createElement("p");
+            var text = document.createTextNode("this is new");
+
+            para.appendChild(text);
+
+            document.getElementById("demo").appendChild(para);
+        </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <p>Lorem exercitation ea quis mollit magna nostrud ut.</p>
+        <p id="p2">Lorem incididunt aliqua exercitation ea occaecat ex dolore sint.</p>
+    </div>
+    <button onclick="deleteNode()">Click Me!!</button>
+
+    <script>
+        function deleteNode() {
+            var parent = document.getElementById("demo");
+            var deleteN = parent.childNodes[3];
+
+            parent.removeChild(deleteN);
+        }
+    </script>
+
+</body>
+</html>
