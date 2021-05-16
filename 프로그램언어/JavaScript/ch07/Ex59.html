@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="modelForm">
+        Car model : <input id="model" value="Volvo"><br>
+    </form>
+    <form id="colorForm">
+        Car color : <input id="color" value="White">
+    </form>
+    <p></p>
+    <button onclick="show()">Try it!!</button>
+
+    <script>
+        function show() {
+            var x = document.forms[0];
+
+            var nodeList = document.querySelectorAll("p");
+
+            nodeList[0].innerHTML = x.elements[0].value;
+        }
+    </script>
+</body>
+</html>

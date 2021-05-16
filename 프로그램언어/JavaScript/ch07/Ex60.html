@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        First name : <input id="fname"><br>
+        Last name : <input id="lname">
+    </form>
+    <p id="demo"></p>
+    <button onclick="showEle()">Try it!!</button>
+
+    <script>
+        function showEle() {
+            var form = document.getElementById("myForm");
+            var len = form.length;
+
+            var text = "";
+            for(var i = 0; i < len; i++) {
+                text += form.elements[i].value + "<br>";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
