@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        BIRTH : <input id="check">
+        <input type="button" onclick="checkEmpty()" value="검사">
+        <p id="demo"></p>
+    </form>
+    
+
+    <script>
+        function checkEmpty() {
+            var x;
+            var exp = /\d{4}\/\d{1,2}\/\d{1,2}/;
+            var val = document.getElementById("check").value;
+
+            if(val.match(exp)) {
+                x = "OK..!!";
+            }
+            else {
+                x = "error..!!";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        NAME : <input id="fname" onblur="checkEmpty()" name="fname" placeholder="NAME">
+        <input type="submit" value="제출">
+    </form>
+
+    <script>
+        document.getElementById("fname").addEventListener("blur", checkEmpty);
+
+        function test() {
+            alert("hello");
+        }
+
+        function checkEmpty() {
+            var x = document.getElementById("fname");
+            var paraCnt = document.getElementsByTagName("p");
+            
+            if(x.value.length == 0) {
+                var para = document.createElement("p");
+                var text = document.createTextNode("기본입력값입니다.");
+                para.appendChild(text);
+
+                if(paraCnt.length == 0) {
+                    var addPara = document.getElementById("myForm").appendChild(para);
+                    addPara.setAttribute("id", "para");
+                    addPara.style.color="red";
+                }
+                
+            }
+            else {
+                document.getElementById("myForm").removeChild(document.getElementById("para"));
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm" onsubmit="return checkEmpty()">
+        NUM : <input id="num" name="num">
+        <input type="submit" id="btn" value="제출">
+        <p id="notice"></p>
+    </form>
+
+    <script>
+        document.getElementById("num").addEventListener("blur", checkEmpty);
+        
+        function test() {
+            document.getElementById("notice").innerHTML = "테스트"; 
+        }
+
+        function checkEmpty() {
+            var min = 2, max = 5;
+            var target = document.getElementById("num");
+            var targetLen = target.value.length;
+            var noticePara = document.getElementById("notice");
+
+            if(targetLen < min && targetLen != 0) {
+                noticePara.innerHTML= "범위미만";
+                return false;
+            }
+            else if(targetLen > max) {
+                noticePara.innerHTML = "범위초과";
+                return false;
+            }
+            else {
+                noticePara.innerHTML = "";
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
