@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="str">Search a string, and display the position of the match:</p>
+    <p id="demo"></p>
+    <button onclick="myFunction()">Try it!!</button>
+    <button onclick="rollBack()">rollBack!!</button>
+
+    <script>
+        function myFunction() {
+            var target = document.getElementById("str").innerHTML;
+            var exp = /String/i;
+            var oldNode = exp.exec(target);
+            var newNode = "HTML5";
+
+            var text = target.replace(oldNode, newNode);
+
+            document.getElementById("str").innerHTML = text;
+        }
+
+        function rollBack() {
+            var target = document.getElementById("str").innerHTML;
+            var exp = /HTML5/i;
+
+            var oldNode = exp.exec(target);
+            var newNode = "string";
+
+            var text = target.replace(oldNode, newNode);
+            document.getElementById("str").innerHTML = text;
+
+        }
+    </script>
+</body>
+</html>
