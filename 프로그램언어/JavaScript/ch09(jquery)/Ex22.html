@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#eq").click(function() {
+                $("p:eq(0)").css({"background-color": "yellow"});
+            });
+
+            $("#gt").click(function() {
+                $("li:gt(1)").css({"background-color": "red"});
+            });
+
+            $("#lt").click(function() {
+                $("li:lt(2)").css({"background-color": "blue"});
+            });
+
+            $("#not").click(function() {
+                $("p:not(.intro)").css({"background-color": "green"});
+            });
+        }); 
+    </script>
+
+</head>
+<body>
+    <h6>Welcome to My Homepage</h6>
+    <p class="intro">My name is Donald.</p>
+    <p>I live in Duvkburg.</p>
+    <p>My best friend is Mickey.</p>
+    <p>What is your favorite:</p>
+    <ul id="choose">
+        <li>Kia</li>
+        <li>BMW</li>
+        <li>Benz</li>
+        <li>Hyundae</li>
+    </ul>
+
+    <button id="eq">eq</button>
+    <button id="gt">gt</button>
+    <button id="lt">lt</button>
+    <button id="not">not</button>
+</body>
+</html>
