@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">This is a paragraph</p>
+    
+    <script>
+       var target = document.getElementById("p1");
+
+    //    target.onmouseover = (event) => {
+    //        target.style.backgroundColor = "yellow";
+    //    } 
+
+    //    target.onmouseleave = (event) => {
+    //        target.style.backgroundColor = "grey";
+    //    }
+
+        let mOver = () => {
+            target.style.backgroundColor = "yellow";
+        }
+
+        let mLeave = () => {
+            target.style.backgroundColor = "grey";
+        }
+
+        this.onmouseover = mOver();
+        this.onmouseleave = mLeave();
+    </script>
+</body>
+</html>
