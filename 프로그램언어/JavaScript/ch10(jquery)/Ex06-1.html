@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="id" placeholder="ID" autocomplete="off">
+        <p id="idNotice"></p>
+        <input id="pw" placeholder="Password">
+        <input type="button" value="login">
+    </form>
+
+    <script>
+        var target = document.getElementById("id");
+
+        let idNotice = () => {
+            document.getElementById("idNotice").innerHTML = 'id';
+        }
+        target.onfocus = idNotice;
+
+    </script>
+</body>
+</html>
