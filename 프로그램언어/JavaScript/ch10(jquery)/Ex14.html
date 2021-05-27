@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var x = 0;
+        $(document).ready(function() {
+            $("div").scroll(function () {
+                $("span").text(x+=1);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div style="width: 300px; height: 300px; overflow: scroll; border: 1px solid black;">
+        Sint voluptate anim anim occaecat amet esse in aliqua in dolore anim elit quis. Voluptate esse exercitation officia consectetur veniam amet labore velit. Sit id officia magna et ipsum ullamco. Elit aliqua aute consequat adipisicing aliqua nisi. Sit occaecat non nulla laboris ipsum in excepteur. Enim pariatur ipsum sit velit non ea sit.
+
+Duis exercitation consectetur sit ipsum sint esse pariatur. Est culpa reprehenderit occaecat aliqua adipisicing irure nulla deserunt adipisicing reprehenderit. Ad minim laboris irure sint officia in mollit incididunt consequat nulla ea elit exercitation.
+
+Commodo est cupidatat incididunt ullamco velit nulla dolore culpa culpa. Aute consectetur culpa esse exercitation adipisicing proident est aliqua consectetur commodo ex enim. Voluptate occaecat deserunt elit commodo nostrud aliquip incididunt culpa.
+
+Eiusmod et est id est fugiat. Consequat sit reprehenderit sunt est fugiat laboris minim occaecat. Veniam id occaecat aute id non adipisicing dolor occaecat cupidatat fugiat.
+
+Culpa officia veniam deserunt nisi proident voluptate exercitation magna ea cillum aute in. Dolor nisi sit exercitation laborum cupidatat esse nostrud reprehenderit. Amet est esse nostrud irure consectetur adipisicing consectetur proident dolore excepteur dolor. Tempor sit cillum cupidatat occaecat dolor. Mollit commodo sit et cillum cillum.
+    </div>
+    <p>Scrolled <span>0 </span> times.</p>
+</body>
+</html>
