@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<script>
+    function changeBackgroundColor() {
+        $(this).css("background-color", "green");
+    }
+    function changeFontColor() {
+        $(this).css("color", "yellow");
+    }
+
+    $(document).ready(function() {
+        $('body').on("click", "p", changeBackgroundColor);
+        $('body').on("click", "p", changeFontColor);
+
+        $('button').on("click", function() {
+            $('body').off("click", "p");
+        })
+    });
+</script>
+<body>
+    <p>Commodo do non non commodo reprehenderit cupidatat sit Lorem velit.</p>
+    <p>Commodo do non non commodo reprehenderit cupidatat sit Lorem velit.</p>
+    <p>Commodo do non non commodo reprehenderit cupidatat sit Lorem velit.</p>
+    <button>Remove Handler</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<script>
+    function handlerName(event) {   // 이벤트를 통해서 데이터를 전송함
+        $('#demo').text(event.data.msg);
+    }
+    $(document).ready(function() {
+        $('p').on("click", {msg : "You just clicked me!!"}, handlerName);   //{변수명 : 값}, 함수명
+    });
+</script>
+<body>
+    <p>Click me!!</p>
+    <p id="demo"></p>
+</body>
+</html>
