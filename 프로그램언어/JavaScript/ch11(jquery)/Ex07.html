@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+       let div = $("img");
+
+       $("#start").click(function() {
+            div.animate({height : '200px'}, "slow");
+            div.animate({width : '400px'}, "slow");
+            div.animate({height : '100px'}, "slow");
+            div.animate({width : '200px'}, "slow");
+       });
+
+       $("#stop").click(function() {
+            div.stop();  
+       });
+    });
+</script>
+<body>
+    <button id="start">Click me!!</button>
+    <button id="stop">stop!!</button><br><br>
+    <img alt="error" src="pic1.jpg" width="200" height="100" style="position: absolute;">
+</body>
+</html>

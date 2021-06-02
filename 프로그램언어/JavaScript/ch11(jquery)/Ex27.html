@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+        $("#start").click(function() {
+            $("div").animate({width : 300});
+            $("div").animate({height : 300});
+            $("div").animate({width : 100});
+            $("div").animate({height : 100});
+            $("span").text($("div").queue().length);
+        });
+
+        $("#stop").click(function() {
+            $("div").stop();
+        })
+    });
+</script>
+<body>
+    <p>Demonstrate fadeTo() with different parameters</p>
+    <button id="stop">stop</button>
+    <button id="start">Click to fade boxes</button><br><br>
+    <div id="red" style="width: 80px; height: 80px; background-color: red;"></div>
+    <div id="green" style="width: 80px; height: 80px; background-color: green;"></div>
+    <div id="yellow" style="width: 80px; height: 80px; background-color: yellow;"></div>
+    <span></span>
+    
+</body>
+</html>
