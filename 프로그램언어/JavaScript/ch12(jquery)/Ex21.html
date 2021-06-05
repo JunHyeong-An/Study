@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<script>
+    function appendText() {
+        var txt1 = "<b>I </b>";
+        var txt2 = $("<i></i>").text("love ");
+        var txt3 = document.createElement("b");
+        txt3.innerHTML = "you";
+
+        $("body").append(txt1, txt2, txt3);
+    }
+
+</script>
+<body>
+    <p>Click the button to insert text after th image</p>
+    <button onclick="appendText()">Insert after</button>
+</body>
+</html>
