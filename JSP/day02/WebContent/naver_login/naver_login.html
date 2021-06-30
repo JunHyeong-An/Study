@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="naver_login.css">
+    <script type="text/javascript" src="naver_login.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="naver_login.jsp" method="POST">
+        <div id="wrap">
+            <header>
+                <h1>NAVER</h1>
+            </header>
+            
+            <main>
+                <article>
+                    <div id="id">
+                        <p class="title">아이디</p>
+                        <div class="inputStyle">
+                            <input name="id" required><span>@naver.com</span>
+                        </div>                        
+                    </div>
+                    
+                    <p id="idFill" class="confirmPara"></p>
+
+                    <div id="pw">
+                        <p class="title">비밀번호</p>
+                        <div class="inputStyle">
+                            <input type="password" name="pw" required>
+                        </div>                        
+                    </div>
+                    <div id="rePw">
+                        <p class="title">비밀번호 재확인</p>
+                        <div class="inputStyle">
+                            <input type="password" name="rePw" required>
+                        </div>                        
+                    </div>
+                </article>
+
+                <article>
+                    <div id="name">
+                        <p class="title">이름</p>
+                        <div class="inputStyle">
+                            <input name="name">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <p class="title">생년월일</p>
+                    </div>
+                    <div id="birth">
+                        <div class="inputStyle">
+                             <input placeholder="년(4자)" name="year" required> 
+                        </div>                        
+                        
+                        <div class="inputStyle">
+                            <select name="month" required>
+                                <option>월</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </div>
+                        <div class="inputStyle">
+                            <input placeholder="일" name="day" required>
+                        </div>                        
+                    </div>
+
+                    <div>
+                        <p class="title">성별</p>
+                        <div class="inputStyle">
+                            <select id="gender">
+                                <option>성별</option>
+                                <option value="남">남</option>
+                                <option value="여">여</option>
+                                </option>
+                            </select>
+                        </div>    
+                    </div>
+                    
+                    <div id="email">
+                        <p class="title">이메일<small><span>(선택)</span></small></p>
+                        <div class="inputStyle">
+                            <input type="email" placeholder="선택입력" name="email">
+                        </div>
+                    </div>
+                    </article>
+
+                    <article>
+                    <div>
+                        <p>전화번호</p>
+                        <div class="inputStyle">
+                            <select id="contryNum" name="contryNum" required>
+                                <option value="82">대한민국 +82</option>
+                            </select>
+                        </div>
+
+                        <div id="auth">
+                            <div class="inputStyle">
+                                <input placeholder="전화번호 입력" name="phoneNum" required>
+                            </div>
+                            <button id="getNum" class="btn">인증번호 받기</button>
+                        </div>
+                        <div class="inputStyle">
+                            <input placeholder="인증번호를 입력하세요" name="authNum" required>
+                        </div>
+                    </div>
+                </article>
+            </main>
+            <input id="submit" type="submit" value="가입하기" class="btn">
+            <footer>
+                <div>
+                    <small>
+                        <a href="">이용약관</a> | <a href=""><b>개인정보처리방침</b></a> | <a href="">책임의 한계와 법적고지</a>
+                        | <a href="">회원정보 고객센터</a>                        
+                    </small>
+                    
+                </div>
+                <div id="last">
+                    <small>
+                        <p id="smallNaver">Naver</p>
+                        <p>Copy <b>Naver Corp.</b>All Rights Reserved.</p>    
+                    </small>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

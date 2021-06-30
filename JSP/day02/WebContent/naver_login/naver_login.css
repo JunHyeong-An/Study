@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F5F6F7;
+}
+
+a {
+    text-decoration: none;
+    
+    color: inherit;
+}
+
+span {
+    color: #8E8E8E;
+}
+
+select {
+    cursor: pointer;
+}
+
+#wrap {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+header {
+    font-size: 30px;
+    font-weight: 900;
+    color: #00C850;
+}
+
+.inputStyle {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+
+    width: 450px;
+    height: 40px;
+    
+    background-color: white;
+    border: 1px solid #DADADA;
+}
+
+.inputStyle > input {
+    width: 350px;
+    height: 20px;
+
+    margin-right: 50px;
+
+    border: none;
+    outline: none;
+
+    background-color: white;
+}
+
+article {
+    margin-bottom: 40px;
+}
+
+div > p {
+    padding: 10px 0;
+
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+#birth {
+    display: flex;
+    justify-content: space-between;
+}
+
+#birth select {
+    width: 120px;
+
+    border: none;
+    outline: none;
+}
+
+#birth div,
+#birth div > input {
+    width: 125px;
+}
+
+#gender, #contryNum {
+    border: none;
+    outline: none;
+    width: 430px;
+}
+
+#auth {
+    display: flex;
+}
+
+#auth > button {
+    width: 130px;
+
+    padding: 0 10px;
+    margin-left: 20px;
+}
+
+#auth > div {
+    width: 300px;
+}
+
+article > div > div {
+    margin-bottom: 10px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background-color: #00C850;
+
+    color: white;
+    font-size: 14pt;
+
+    cursor: pointer;
+}
+
+#submit {
+    width: 470px;
+    height: 50px;
+
+    margin-bottom: 20px;
+}
+
+#getNum {
+    font-size: 11pt;
+}
+
+footer {
+    font-size: 11pt;
+}
+
+#last {
+    display: flex;
+    justify-content: center;
+}
+
+#last > small {
+    display: flex;
+    align-items: center;
+}
+
+#smallNaver {
+    color: #00C850;
+
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+#last > small > p {
+    margin-right: 10px;
+}
+
+#confirmPara {
+    color: red;
+    font-size: 10pt;
+}
