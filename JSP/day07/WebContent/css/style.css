@@ -1,0 +1,119 @@
+@charset "utf-8";
+body, div, span, p, ul, li, header, nav, main {
+        margin: 0;
+        padding: 0;
+}
+body {
+        width: 100%;
+        overflow-x: hidden; 
+}
+a {
+        color: inherit;
+        text-decoration: none;
+}
+header {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+/*         background-color: ${theme.backgroundColor}; */
+        background-color: black;
+        color: white;
+}
+
+header > .login-info {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	
+	padding-right: 10px;
+	padding-bottom: 10px;
+	
+	
+}
+nav {
+        background-color: #333;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+}
+nav > ul {
+        list-style: none;
+        display: flex;
+}
+nav > ul > li {
+        display: block;
+        font-size: 20px;
+}
+nav > ul > li > a {
+        display: block;
+        font-weight: bold;
+        padding: 5px 20px;
+}
+nav > ul > li > a:hover {
+        color: #0ff;
+}
+
+main {
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
+}
+
+footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+}
+
+#book-list {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+#book-list td,
+#book-list th {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+#add-form > p > input[type="text"],
+#add-form > p > input[type="date"],
+#add-form > p > input[type="password"],
+#add-form > p > input[type="number"] {
+	all: unset;
+	border-bottom: 2px solid black;
+	padding: 5px;
+	margin: 5px;
+	width: 200px;
+}
+
+#add-form > p > input[type="submit"] {
+	box-sizing: border-box;
+	all: unset;
+	background-color: white;
+	color: black;
+	font-size: 20px;
+	text-align: center;
+	padding: 5px 0px;
+	margin: 5px;
+	width: 210px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+#add-form > p > input[type="submit"]:hover {
+	background-color: black;
+	color: white;
+}
+
+.pointer {
+	cursor: pointer;
+}
