@@ -3,6 +3,14 @@ package springbook.user.domain;
 public class User {
 	private String id, pw, name;
 
+	public User(String id, String pw, String name) {
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+	}
+
+	public User() {}
+	
 	public String getId() {
 		return id;
 	}
