@@ -55,3 +55,30 @@ const toBuy = [apple, potato, "pizza"];
 toBuy.push("kimbab");
 
 console.log(toBuy);
+
+////////////////////////////////////////////////////////
+
+// const playerName = "nico";
+// const playerPoints = 121212;
+// const playerHandsome = true;
+// const playerFat = "little bit";
+
+const player = {
+    name : "nico",
+    points : 12121212,
+    handsome : true,
+    fat : "little bit"
+};
+
+console.log(player["name"]);
+console.log(player.name);
+player.fat = false;
+
+console.log(player.fat);
+player.lastName = "potato";
+console.log(player.lastName);
+player.points = 15;
+player.points += 15;
+
+console.log(player.points);
+// why can we modify the const variable? because it change something inside of player
