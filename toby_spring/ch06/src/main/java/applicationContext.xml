@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!-- UserDAO DI -->				
+<!-- 	<bean id="connectionMaker" class="springbook.user.domain.NDriverConnection"/> -->
+<!-- 내가 만든 connection 인터페이스가아닌 dataSource를 사용할거임. -->
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/spring" />
+		<property name="username" value="sure0830" />
+		<property name="password" value="1234" />
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- UserDAO -->
+	<bean id="userDAO" class="springbook.user.dao.UserDAOJdbc">
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+	
+	<!--  userService -->
+	<bean id="userService" class="springbook.user.service.UserService">
+		<property name="userDAO" ref="userDAO"/>
+		<property name="uulp" ref="userUpgradeLevelPolicy"/>
+	</bean>
+	
+	<!-- levelPolicy -->
+	<bean id="userUpgradeLevelPolicy" class="springbook.user.service.NormalUpgradeLevel">
+		<property name="userDAO" ref="userDAO"/>
+	</bean>
+	
+	
+</beans>
