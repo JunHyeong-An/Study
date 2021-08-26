@@ -14,7 +14,7 @@ function handleWindowResize() {
 }
 function handleContextMenuClick() {
     title.innerHTML = "That was right click!";
-    title.style.color = "red";
+    title.style.color = "orange";
 }
 
 title.addEventListener("mouseenter", handleMouseEnter);
