@@ -56,3 +56,4 @@ function calculateKrAge(ageOfForeigner) {
 }
 
 console.log(calculateKrAge(age));
+//Nan = Not a Number
