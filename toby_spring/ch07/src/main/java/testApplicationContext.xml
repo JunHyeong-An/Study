@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop/"
+	xmlns:tx="http://www.springframework.org/schema/tx/"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop/ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+						
+	<!-- UserDAO DI -->
+	<!-- <bean id="connectionMaker" class="springbook.user.domain.NDriverConnection"/> -->
+	<!-- 내가 만든 connection 인터페이스가아닌 dataSource를 사용할거임. -->
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/spring" />
+		<property name="username" value="sure0830" />
+		<property name="password" value="1234" />
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- sqlService -->
+	<bean id="sqlService" class="springbook.user.sqlService.SimpleSqlService">
+		<property name="sqlMap">
+			<map>
+				<entry key="userAdd" 
+					value="insert into users(id, name, pw, email, level, login, recommand) 
+					values (?, ?, ?, ?, ?, ?, ?)"/>
+				<entry key="userDeleteAll"
+					value="truncate users"/>
+				<entry key="userGet"
+					value="select * from users where id = ? order by id"/>
+				<entry key="userGetCount"
+					value="select count(*) from users"/>
+				<entry key="userGetAll"
+					value="select * from users order by id"/>
+				<entry key="userUpdate"
+					value="update users 
+					set pw = ?, name = ?, email = ?, level = ?, login = ?, recommand = ?, email = ? where id = ?"/>
+			</map>
+		</property>
+	</bean>
+
+	<!-- UserDAO -->
+	<bean id="userDAO" class="springbook.user.dao.UserDAOJdbc">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+		<property name="sqlService" ref="sqlService"/>
+	</bean>
+	
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<!-- userService -->
+	<bean id="userServiceImpl" class="springbook.user.service.UserServiceImpl">
+		<property name="userDAO" ref="userDAO"/>
+		<property name="uulp" ref="userUpgradeLevelPolicy" />
+	</bean>
+
+	<!-- levelPolicy -->
+	<bean id="userUpgradeLevelPolicy" class="springbook.user.service.NormalUpgradeLevel">
+		<property name="userDAO" ref="userDAO" />
+		<property name="mailSender" ref="mailSender"/>
+	</bean>
+	
+	<!-- levelUpgrade Test -->
+<!-- 	<bean id="userUpgradeLevelPolicy" class="springbook.user.service.TestUpgradeLevelPolicy"> -->
+<!-- 		<property name="userDAO" ref="userDAO" /> -->
+<!-- 		<constructor-arg name="id" value="user4"/> -->
+<!-- 	</bean> -->
+
+	<!-- mail sender -->
+	<bean id="mailSender" class="springbook.user.service.DummyMailSender"/>
+	<!-- test mail sender -->
+<!-- 	<bean id="mailSender" class="springbook.user.service.MockMailSender"/> -->
+	<bean id="txHandler" class="springbook.user.service.TransactionHandler">
+		<property name="pattern" value="upgradeLevels"/>
+		<property name="target" ref="userServiceImpl"/>
+		<property name="transactionManger" ref="transactionManager"/>
+	</bean>
+	
+	<bean id="txProxyFactoryBean" class="springbook.user.service.TxProxyFactoryBean">
+		<property name="txHandler" ref="txHandler"/>
+		<property name="serviceInterface" value="springbook.user.service.UserService"/>
+	</bean>
+	
+	<!-- transactionAdvice -->
+	<bean id="transactionAdvice" class="springbook.user.service.TransactionAdvice">
+		<property name="transactionManager" ref="transactionManager"/>
+	</bean>
+	
+	<!-- pointcut -->
+	<bean id="pointcut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+		<property name="mappedName" value="upgrade*"/>
+	</bean>
+	
+	<!-- advisor -->
+	<bean id="transactionAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice" ref="transactionAdvice"/>
+		<property name="pointcut" ref="pointcut"/>
+	</bean>
+	
+	<!-- proxy bean -->
+	<bean id="proxyBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="userServiceImpl"/>
+		<property name="interceptorNames">
+			<list>
+				<value>transactionAdvisor</value>
+			</list>
+		</property>
+	</bean>
+	
+<!-- 	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/> -->
+	
+</beans>
