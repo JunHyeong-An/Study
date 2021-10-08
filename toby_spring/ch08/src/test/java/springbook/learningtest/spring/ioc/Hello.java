@@ -1,7 +1,7 @@
 package springbook.learningtest.spring.ioc;
 
 public class Hello {
-	String name;
+	private String name;
 	Printer printer;
 	
 	public void setName(String name) {

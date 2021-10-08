@@ -1,0 +1,5 @@
+printer.(Class) = springbook.learningtest.spring.ioc.StringPrinter
+
+hello.(Class)=springbook.learningtest.spring.ioc.Hello
+hello.name=Spring
+hello.printer(ref)=printer

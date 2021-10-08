@@ -5,7 +5,6 @@ public class StringPrinter implements Printer {
 	
 	public void print(String message) {
 			this.buffer.append(message);
-			
 	}
 	
 	@Override

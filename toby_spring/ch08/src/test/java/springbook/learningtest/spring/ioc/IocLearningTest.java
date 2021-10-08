@@ -6,8 +6,15 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.context.support.StaticApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 public class IocLearningTest {
 	@Test
@@ -44,5 +51,43 @@ public class IocLearningTest {
 		Hello hello = ac.getBean("hello", Hello.class);
 		assertThat(hello, is(notNullValue()));
 		assertThat(hello.sayHello(), is("Hello spring"));
+	}
+	
+	@Test
+	public void genericApplicationContextTest() {
+		GenericApplicationContext context = 
+				new GenericApplicationContext();
+		
+		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(context);
+		reader.loadBeanDefinitions("springbook/learningtest/spring/ioc/TestGenericApplicationContext.xml");
+		context.refresh();
+		
+		Hello hello = context.getBean("hello", Hello.class);
+		hello.print();
+		
+		assertThat(context.getBean("printer").toString(), is("Hello Spring"));
+	}
+	
+	@Test
+	public void parentContextTest() {
+		ApplicationContext parent =
+				new GenericXmlApplicationContext("classpath:parentContext.xml");
+		
+		Hello hello = parent.getBean("hello", Hello.class);
+		hello.print();
+		
+		assertThat(hello.printer.toString(), is("Hello Parent"));
+		
+		GenericApplicationContext child =
+				new GenericApplicationContext(parent);
+		
+		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(child);
+		reader.loadBeanDefinitions("classpath:childContext.xml");
+		
+		child.refresh();
+		
+		Hello hello2 = child.getBean("hello", Hello.class);
+		hello2.print();
+		assertThat(hello2.printer.toString(), is("Hello Child"));
 	}
 }
